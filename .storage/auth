@@ -1,0 +1,93 @@
+{
+    "data": {
+        "credentials": [
+            {
+                "auth_provider_id": null,
+                "auth_provider_type": "homeassistant",
+                "data": {
+                    "username": "choephix"
+                },
+                "id": "915e190709d74540868386d0229cd864",
+                "user_id": "c6d4efd94e1c45a18bc5d39999df7150"
+            }
+        ],
+        "groups": [
+            {
+                "id": "system-admin",
+                "name": "Administrators"
+            },
+            {
+                "id": "system-users",
+                "name": "Users"
+            },
+            {
+                "id": "system-read-only",
+                "name": "Read Only"
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": null,
+                "client_name": null,
+                "created_at": "2019-05-23T22:22:14.422343+00:00",
+                "id": "d4c59e20f85540ddad538a6a1ead1938",
+                "jwt_key": "a7be0b8ab8304a268bc1aa82536bf22bd00877d6a4861bae6163cfb35712fab5fc7b9f6a851aac405290033fa6901869e0df20d8b1859da3266439d25e597cac",
+                "last_used_at": "2019-05-23T22:25:07.140026+00:00",
+                "last_used_ip": "172.30.32.2",
+                "token": "585b8df1df1ea126710393b73cbb4f178b04f28d1c4da3a0756da0a7fedaa7eb253d7b391fe72daeb4b726180176cfe742d4fe297fd259d1f40da0c89ba817b8",
+                "token_type": "system",
+                "user_id": "588ba054352c4b7d8d4bf61a9eed66e9"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_icon": null,
+                "client_id": "http://192.168.0.240:8123/",
+                "client_name": null,
+                "created_at": "2019-05-23T22:22:48.866353+00:00",
+                "id": "3e0f57a17c9945feabb201fe92601ac0",
+                "jwt_key": "d93983cd93c2a3a51af14b107e9fea1e14817fffd0b597e53d7fff02f7988f4eb197fcb6d6f307df1b05aa3160103a3ea94efd3f301d37b558a039691e96c1a2",
+                "last_used_at": "2019-05-23T22:22:48.866608+00:00",
+                "last_used_ip": "192.168.0.199",
+                "token": "03e235ad173619aa10d4788db397c7b5c2f0716684f693b81a4ea7795cffb8de0975aa948322f80aa21770cd82f1a522e4359c70235037ee428446c33e61d743",
+                "token_type": "normal",
+                "user_id": "c6d4efd94e1c45a18bc5d39999df7150"
+            }
+        ],
+        "users": [
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "15664cb04bf74a0a879b30a4b1d4a4d0",
+                "is_active": true,
+                "is_owner": false,
+                "name": "Home Assistant Cloud",
+                "system_generated": true
+            },
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "588ba054352c4b7d8d4bf61a9eed66e9",
+                "is_active": true,
+                "is_owner": false,
+                "name": "Hass.io",
+                "system_generated": true
+            },
+            {
+                "group_ids": [
+                    "system-admin"
+                ],
+                "id": "c6d4efd94e1c45a18bc5d39999df7150",
+                "is_active": true,
+                "is_owner": true,
+                "name": "choephix",
+                "system_generated": false
+            }
+        ]
+    },
+    "key": "auth",
+    "version": 1
+}

@@ -1,0 +1,12 @@
+{
+    "data": {
+        "users": [
+            {
+                "password": "JDJiJDEyJDRQMi9xN3RUQVFxZEtrV2xrZXRNTi5WR1hldWVOak84bTNlRWo2VlJyL2NiY3ZUUm1HdjVt",
+                "username": "choephix"
+            }
+        ]
+    },
+    "key": "auth_provider.homeassistant",
+    "version": 1
+}
