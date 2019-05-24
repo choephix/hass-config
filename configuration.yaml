@@ -38,6 +38,27 @@ discovery:
   ignore:
     - yeelight
 
+recorder:
+  include:
+    domains: sensor, switch, light, device_tracker, person, sun
+    entities: 
+      - binary_sensor.boiler_heating
+      - binary_sensor.pir_hall
+      - binary_sensor.pir_kitchen
+  exclude:
+    entities:
+      - light.hq_lights
+      - switch.power_strip_countdown_1
+      - switch.power_strip_countdown_2
+      - switch.power_strip_countdown_3
+      - switch.power_strip_countdown_4
+      - switch.power_strip_countdown_usb
+      - sensor.time
+      - sensor.pechkata_timer
+      - sensor.last_changed_boiler
+      - sensor.last_changed_pir_hall
+      - sensor.last_changed_pir_kitchen
+      
 history:
   exclude:
     domains:
@@ -52,7 +73,6 @@ history:
       - sensor.last_changed_boiler
       - sensor.last_changed_pir_hall
       - sensor.last_changed_pir_kitchen
-      - light.hq_lights
       - binary_sensor.bb_button_1
       - binary_sensor.bb_button_2
       - binary_sensor.bb_button_3
