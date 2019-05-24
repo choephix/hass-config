@@ -1,433 +1,199 @@
-2019-05-23 23:46:17 INFO (MainThread) [homeassistant.setup] Setup of domain logger took 0.0 seconds.
-2019-05-23 23:46:17 INFO (MainThread) [homeassistant.setup] Setting up http
-2019-05-23 23:46:17 INFO (MainThread) [homeassistant.setup] Setup of domain http took 0.0 seconds.
-2019-05-23 23:46:17 INFO (MainThread) [homeassistant.setup] Setting up system_log
-2019-05-23 23:46:17 INFO (MainThread) [homeassistant.setup] Setup of domain system_log took 0.0 seconds.
-2019-05-23 23:46:17 INFO (MainThread) [homeassistant.setup] Setting up recorder
-2019-05-23 23:46:18 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=3 from 2019-05-23 23:29:38.655895)
-2019-05-23 23:46:18 INFO (MainThread) [homeassistant.setup] Setup of domain recorder took 1.5 seconds.
-2019-05-23 23:46:18 INFO (MainThread) [homeassistant.setup] Setting up lovelace
-2019-05-23 23:46:19 INFO (MainThread) [homeassistant.setup] Setup of domain lovelace took 0.0 seconds.
-2019-05-23 23:46:19 INFO (MainThread) [homeassistant.setup] Setting up xiaomi_aqara
-2019-05-23 23:46:19 INFO (MainThread) [homeassistant.setup] Setting up yeelight
-2019-05-23 23:46:19 INFO (MainThread) [homeassistant.setup] Setting up updater
-2019-05-23 23:46:19 INFO (MainThread) [homeassistant.setup] Setup of domain updater took 0.0 seconds.
-2019-05-23 23:46:19 INFO (MainThread) [homeassistant.setup] Setting up discovery
-2019-05-23 23:46:19 INFO (MainThread) [homeassistant.setup] Setup of domain discovery took 0.8 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up rest_command
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain rest_command took 0.0 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up input_boolean
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up zone
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain zone took 0.0 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up shell_command
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain shell_command took 0.0 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up person
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up group
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain group took 0.0 seconds.
-2019-05-23 23:46:20 INFO (SyncWorker_16) [homeassistant.loader] Loaded time_date from homeassistant.components.time_date
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up tuya
-2019-05-23 23:46:20 INFO (SyncWorker_9) [homeassistant.loader] Loaded rpi_gpio from homeassistant.components.rpi_gpio
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up input_number
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up sun
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain sun took 0.1 seconds.
-2019-05-23 23:46:20 INFO (SyncWorker_14) [homeassistant.components.xiaomi_aqara] Discovering Xiaomi Gateways (Try 1)
-2019-05-23 23:46:20 INFO (SyncWorker_14) [xiaomi_gateway] Xiaomi Gateway 7811dcb1f087 found at IP 192.168.0.191
-2019-05-23 23:46:20 INFO (SyncWorker_14) [xiaomi_gateway] Discovering Xiaomi Devices
-2019-05-23 23:46:20 INFO (SyncWorker_3) [homeassistant.loader] Loaded dht from homeassistant.components.dht
-2019-05-23 23:46:20 INFO (SyncWorker_15) [homeassistant.loader] Loaded template from homeassistant.components.template
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up auth
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain auth took 0.0 seconds.
-2019-05-23 23:46:20 INFO (SyncWorker_14) [xiaomi_gateway] Found 6 devices
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up system_health
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain system_health took 0.0 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up webhook
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain webhook took 0.0 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up websocket_api
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain websocket_api took 0.0 seconds.
-2019-05-23 23:46:20 INFO (SyncWorker_5) [homeassistant.loader] Loaded xiaomi_miio from homeassistant.components.xiaomi_miio
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up api
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up script
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up conversation
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain conversation took 0.0 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up history
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain history took 0.0 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up config
-2019-05-23 23:46:20 INFO (SyncWorker_19) [homeassistant.loader] Loaded ping from homeassistant.components.ping
-2019-05-23 23:46:20 INFO (SyncWorker_16) [homeassistant.loader] Loaded command_line from homeassistant.components.command_line
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain yeelight took 1.7 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up binary_sensor
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up light
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setup of domain api took 0.3 seconds.
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up switch
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.template
-2019-05-23 23:46:20 INFO (MainThread) [homeassistant.setup] Setting up onboarding
-2019-05-23 23:46:22 INFO (MainThread) [homeassistant.setup] Setting up cloud
-2019-05-23 23:46:23 INFO (MainThread) [homeassistant.setup] Setting up automation
-2019-05-23 23:46:23 INFO (MainThread) [homeassistant.components.light] Setting up light.xiaomi_miio
-2019-05-23 23:46:23 INFO (MainThread) [homeassistant.components.light] Setting up light.template
-2019-05-23 23:46:23 INFO (MainThread) [homeassistant.components.light] Setting up light.group
-2019-05-23 23:46:23 INFO (MainThread) [homeassistant.setup] Setup of domain script took 3.3 seconds.
-2019-05-23 23:46:23 INFO (SyncWorker_17) [homeassistant.loader] Loaded nmap_tracker from homeassistant.components.nmap_tracker
-2019-05-23 23:46:24 INFO (MainThread) [homeassistant.setup] Setting up sensor
-2019-05-23 23:46:24 INFO (MainThread) [homeassistant.setup] Setup of domain config took 3.4 seconds.
-2019-05-23 23:46:24 INFO (MainThread) [homeassistant.components.switch] Setting up switch.template
-2019-05-23 23:46:24 INFO (MainThread) [homeassistant.setup] Setting up rpi_gpio
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.xiaomi_miio.light] Initializing with host 192.168.0.150 (token 9fb9e...)
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.command_line
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.dht
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.time_date
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.setup] Setting up zeroconf
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.setup] Setting up device_tracker
-2019-05-23 23:46:25 INFO (SyncWorker_14) [xiaomi_gateway] Gateway discovery finished in 5 seconds
-2019-05-23 23:46:25 INFO (SyncWorker_14) [xiaomi_gateway] Creating Multicast Socket
-2019-05-23 23:46:25 INFO (SyncWorker_8) [homeassistant.loader] Loaded scene from homeassistant.components.scene
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.setup] Setup of domain onboarding took 4.6 seconds.
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.setup] Setup of domain cloud took 3.4 seconds.
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.setup] Setup of domain rpi_gpio took 1.6 seconds.
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.rpi_gpio
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.rpi_gpio
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.components.switch] Setting up switch.rpi_gpio
-2019-05-23 23:46:25 INFO (MainThread) [homeassistant.setup] Setup of domain tuya took 5.6 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up scene
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain scene took 0.0 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain automation took 2.5 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain input_boolean took 6.3 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain input_number took 6.2 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain person took 6.3 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.device_tracker] Setting up device_tracker.ping
-2019-05-23 23:46:26 INFO (SyncWorker_12) [homeassistant.loader] Loaded cover from homeassistant.components.cover
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.device_tracker] Setting up device_tracker.nmap_tracker
-2019-05-23 23:46:26 INFO (SyncWorker_6) [homeassistant.loader] Loaded lock from homeassistant.components.lock
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up frontend
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.scene] Setting up scene.tuya
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain xiaomi_aqara took 7.5 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up cover
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain cover took 0.0 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up lock
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain lock took 0.0 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain switch took 5.6 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain frontend took 0.2 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.light] Setting up light.switch
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.cover] Setting up cover.xiaomi_aqara
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.lock] Setting up lock.xiaomi_aqara
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.switch] Setting up switch.tuya
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.switch] Setting up switch.xiaomi_aqara
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up map
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain map took 0.0 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up panel_custom
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain panel_custom took 0.0 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up logbook
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain logbook took 0.0 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain sensor took 2.8 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setting up hassio
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.xiaomi_aqara
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain zeroconf took 1.6 seconds.
-2019-05-23 23:46:26 INFO (MainThread) [homeassistant.setup] Setup of domain light took 6.1 seconds.
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.light] Setting up light.xiaomi_aqara
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.setup] Setup of domain binary_sensor took 6.2 seconds.
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.xiaomi_aqara
-2019-05-23 23:46:27 INFO (MainThread) [homeassistant.setup] Setup of domain hassio took 0.3 seconds.
-2019-05-23 23:46:38 INFO (MainThread) [homeassistant.setup] Setup of domain device_tracker took 13.3 seconds.
-2019-05-23 23:46:38 INFO (MainThread) [homeassistant.setup] Setting up mobile_app
-2019-05-23 23:46:38 INFO (MainThread) [homeassistant.setup] Setup of domain mobile_app took 0.0 seconds.
-2019-05-23 23:46:38 INFO (SyncWorker_9) [homeassistant.loader] Loaded notify from homeassistant.components.notify
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.setup] Setting up default_config
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.setup] Setting up notify
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.setup] Setup of domain notify took 0.0 seconds.
-2019-05-23 23:46:39 INFO (SyncWorker_12) [homeassistant.loader] Loaded stream from homeassistant.components.stream
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.components.notify] Setting up notify.mobile_app
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.setup] Setting up stream
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.setup] Setup of domain stream took 0.0 seconds.
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.setup] Setup of domain default_config took 0.0 seconds.
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.bootstrap] Home Assistant initialized in 24.07s
-2019-05-23 23:46:39 INFO (MainThread) [homeassistant.core] Starting Home Assistant
-2019-05-23 23:46:40 WARNING (MainThread) [homeassistant.components.template.sensor] Could not render template Phone Battery, the state is unknown.
-2019-05-23 23:46:40 INFO (MainThread) [homeassistant.core] Timer:starting
-2019-05-23 23:46:45 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.0.199
-2019-05-23 23:46:45 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.0.199
-2019-05-23 23:46:54 INFO (MainThread) [homeassistant.components.discovery] Unknown service discovered: home_assistant {'host': '192.168.0.220', 'port': 8123, 'hostname': 'Home._home-assistant._tcp.local.', 'properties': {'version': '0.93.2', 'base_url': 'http://192.168.0.240:8123', 'requires_api_password': True}}
-2019-05-23 23:46:54 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.71', 'port': 54321, 'hostname': 'yeelink-light-color1_miio57704721.local.', 'properties': {'epoch': '1', 'mac': '34ce008e8d5e'}, 'mac_address': '34ce008e8d5e', 'device_type': 'color1'}
-2019-05-23 23:46:54 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.73', 'port': 54321, 'hostname': 'yeelink-light-color2_miio131155263.local.', 'properties': {'epoch': '1', 'mac': '04cf8c84b46d'}, 'mac_address': '04cf8c84b46d', 'device_type': 'color2'}
-2019-05-23 23:46:54 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.74', 'port': 54321, 'hostname': 'yeelink-light-color2_miio133505534.local.', 'properties': {'epoch': '1', 'mac': '04cf8ca8912c'}, 'mac_address': '04cf8ca8912c', 'device_type': 'color2'}
-2019-05-23 23:46:54 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.72', 'port': 54321, 'hostname': 'yeelink-light-color1_miio57798391.local.', 'properties': {'epoch': '1', 'mac': '34ce008ffb44'}, 'mac_address': '34ce008ffb44', 'device_type': 'color1'}
-2019-05-23 23:46:54 INFO (MainThread) [homeassistant.components.discovery] Found new service: xiaomi_gw {'host': '192.168.0.191', 'port': 54321, 'hostname': 'lumi-gateway-v3_miio78431457.local.', 'properties': {'epoch': '1', 'mac': '7811dcb1f087'}, 'mac_address': '7811dcb1f087'}
-2019-05-23 23:47:26 INFO (SyncWorker_12) [homeassistant.loader] Loaded ambient_station from homeassistant.components.ambient_station
-2019-05-23 23:47:27 INFO (SyncWorker_18) [homeassistant.loader] Loaded zwave from homeassistant.components.zwave
-2019-05-23 23:47:27 INFO (SyncWorker_5) [homeassistant.loader] Loaded dialogflow from homeassistant.components.dialogflow
-2019-05-23 23:47:27 INFO (SyncWorker_14) [homeassistant.loader] Loaded deconz from homeassistant.components.deconz
-2019-05-23 23:47:28 INFO (SyncWorker_8) [homeassistant.loader] Loaded tellduslive from homeassistant.components.tellduslive
-2019-05-23 23:47:28 INFO (SyncWorker_2) [homeassistant.loader] Loaded smartthings from homeassistant.components.smartthings
-2019-05-23 23:47:28 INFO (SyncWorker_16) [homeassistant.loader] Loaded openuv from homeassistant.components.openuv
-2019-05-23 23:47:28 INFO (SyncWorker_4) [homeassistant.loader] Loaded gpslogger from homeassistant.components.gpslogger
-2019-05-23 23:47:28 INFO (SyncWorker_5) [homeassistant.loader] Loaded lifx from homeassistant.components.lifx
-2019-05-23 23:47:28 INFO (SyncWorker_14) [homeassistant.loader] Loaded luftdaten from homeassistant.components.luftdaten
-2019-05-23 23:47:28 INFO (SyncWorker_0) [homeassistant.loader] Loaded rainmachine from homeassistant.components.rainmachine
-2019-05-23 23:47:28 INFO (SyncWorker_6) [homeassistant.loader] Loaded ios from homeassistant.components.ios
-2019-05-23 23:47:28 INFO (SyncWorker_18) [homeassistant.loader] Loaded ifttt from homeassistant.components.ifttt
-2019-05-23 23:47:28 INFO (SyncWorker_17) [homeassistant.loader] Loaded twilio from homeassistant.components.twilio
-2019-05-23 23:47:28 INFO (SyncWorker_7) [homeassistant.loader] Loaded daikin from homeassistant.components.daikin
-2019-05-23 23:47:28 INFO (SyncWorker_19) [homeassistant.loader] Loaded sonos from homeassistant.components.sonos
-2019-05-23 23:47:28 INFO (SyncWorker_11) [homeassistant.loader] Loaded esphome from homeassistant.components.esphome
-2019-05-23 23:47:28 INFO (SyncWorker_4) [homeassistant.loader] Loaded tradfri from homeassistant.components.tradfri
-2019-05-23 23:47:28 INFO (SyncWorker_5) [homeassistant.loader] Loaded locative from homeassistant.components.locative
-2019-05-23 23:47:28 INFO (SyncWorker_14) [homeassistant.loader] Loaded mqtt from homeassistant.components.mqtt
-2019-05-23 23:47:28 INFO (SyncWorker_0) [homeassistant.loader] Loaded logi_circle from homeassistant.components.logi_circle
-2019-05-23 23:47:28 INFO (SyncWorker_6) [homeassistant.loader] Loaded owntracks from homeassistant.components.owntracks
-2019-05-23 23:47:28 INFO (SyncWorker_18) [homeassistant.loader] Loaded ambiclimate from homeassistant.components.ambiclimate
-2019-05-23 23:47:28 INFO (SyncWorker_17) [homeassistant.loader] Loaded tplink from homeassistant.components.tplink
-2019-05-23 23:47:28 INFO (SyncWorker_7) [homeassistant.loader] Loaded emulated_roku from homeassistant.components.emulated_roku
-2019-05-23 23:47:28 INFO (SyncWorker_19) [homeassistant.loader] Loaded ipma from homeassistant.components.ipma
-2019-05-23 23:47:28 INFO (SyncWorker_11) [homeassistant.loader] Loaded heos from homeassistant.components.heos
-2019-05-23 23:47:28 INFO (SyncWorker_5) [homeassistant.loader] Loaded point from homeassistant.components.point
-2019-05-23 23:47:28 INFO (SyncWorker_14) [homeassistant.loader] Loaded toon from homeassistant.components.toon
-2019-05-23 23:47:28 INFO (SyncWorker_0) [homeassistant.loader] Loaded hue from homeassistant.components.hue
-2019-05-23 23:47:28 INFO (SyncWorker_6) [homeassistant.loader] Loaded nest from homeassistant.components.nest
-2019-05-23 23:47:28 INFO (SyncWorker_18) [homeassistant.loader] Loaded zha from homeassistant.components.zha
-2019-05-23 23:47:28 INFO (SyncWorker_17) [homeassistant.loader] Loaded smhi from homeassistant.components.smhi
-2019-05-23 23:47:28 INFO (SyncWorker_7) [homeassistant.loader] Loaded cast from homeassistant.components.cast
-2019-05-23 23:47:28 INFO (SyncWorker_13) [homeassistant.loader] Loaded hangouts from homeassistant.components.hangouts
-2019-05-23 23:47:28 INFO (SyncWorker_3) [homeassistant.loader] Loaded simplisafe from homeassistant.components.simplisafe
-2019-05-23 23:47:28 INFO (SyncWorker_5) [homeassistant.loader] Loaded unifi from homeassistant.components.unifi
-2019-05-23 23:47:28 INFO (SyncWorker_14) [homeassistant.loader] Loaded axis from homeassistant.components.axis
-2019-05-23 23:47:28 INFO (SyncWorker_0) [homeassistant.loader] Loaded geofency from homeassistant.components.geofency
-2019-05-23 23:47:28 INFO (SyncWorker_6) [homeassistant.loader] Loaded upnp from homeassistant.components.upnp
-2019-05-23 23:47:28 INFO (SyncWorker_18) [homeassistant.loader] Loaded mailgun from homeassistant.components.mailgun
-2019-05-23 23:47:28 INFO (SyncWorker_17) [homeassistant.loader] Loaded ps4 from homeassistant.components.ps4
-2019-05-23 23:47:28 INFO (SyncWorker_19) [homeassistant.loader] Loaded homematicip_cloud from homeassistant.components.homematicip_cloud
-2019-05-23 23:47:36 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1822299056] local variable 'request' referenced before assignment
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
-    await self._loop.create_connection(*args, **kwargs))
-  File "uvloop/loop.pyx", line 1904, in create_connection
-  File "uvloop/loop.pyx", line 1883, in uvloop.loop.Loop.create_connection
-OSError: [Errno 113] Host is unreachable
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 100, in async_service_handler
-    headers=headers
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
-    timeout=real_timeout
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
-    proto = await self._create_connection(req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
-    req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
-    raise last_exc
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
-    req=req, client_error=client_error)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
-    raise client_error(req.connection_key, exc) from exc
-aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 192.168.0.61:8081 ssl:None [Host is unreachable]
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/websocket_api/commands.py", line 121, in handle_call_service
-    connection.context(msg))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/light/__init__.py", line 297, in async_handle_light_on_service
-    await light.async_turn_on(**pars)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/template/light.py", line 216, in async_turn_on
-    await self._on_script.async_run()
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 131, in async_run
-    await self._handle_action(action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 210, in _handle_action
-    action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 299, in _async_call_service
-    context=context
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/service.py", line 89, in async_call_from_config
-    domain, service_name, service_data, blocking=blocking, context=context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 113, in async_service_handler
-    _LOGGER.error("Client error %s.", request.url)
-UnboundLocalError: local variable 'request' referenced before assignment
-2019-05-23 23:47:36 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1822299056] local variable 'request' referenced before assignment
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
-    await self._loop.create_connection(*args, **kwargs))
-  File "uvloop/loop.pyx", line 1904, in create_connection
-  File "uvloop/loop.pyx", line 1883, in uvloop.loop.Loop.create_connection
-OSError: [Errno 113] Host is unreachable
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 100, in async_service_handler
-    headers=headers
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
-    timeout=real_timeout
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
-    proto = await self._create_connection(req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
-    req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
-    raise last_exc
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
-    req=req, client_error=client_error)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
-    raise client_error(req.connection_key, exc) from exc
-aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 192.168.0.61:8081 ssl:None [Host is unreachable]
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/websocket_api/commands.py", line 121, in handle_call_service
-    connection.context(msg))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/light/__init__.py", line 297, in async_handle_light_on_service
-    await light.async_turn_on(**pars)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/template/light.py", line 216, in async_turn_on
-    await self._on_script.async_run()
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 131, in async_run
-    await self._handle_action(action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 210, in _handle_action
-    action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 299, in _async_call_service
-    context=context
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/service.py", line 89, in async_call_from_config
-    domain, service_name, service_data, blocking=blocking, context=context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 113, in async_service_handler
-    _LOGGER.error("Client error %s.", request.url)
-UnboundLocalError: local variable 'request' referenced before assignment
-2019-05-23 23:47:36 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1822299056] local variable 'request' referenced before assignment
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
-    await self._loop.create_connection(*args, **kwargs))
-  File "uvloop/loop.pyx", line 1904, in create_connection
-  File "uvloop/loop.pyx", line 1883, in uvloop.loop.Loop.create_connection
-OSError: [Errno 113] Host is unreachable
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 100, in async_service_handler
-    headers=headers
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
-    timeout=real_timeout
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
-    proto = await self._create_connection(req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
-    req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
-    raise last_exc
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
-    req=req, client_error=client_error)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
-    raise client_error(req.connection_key, exc) from exc
-aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 192.168.0.61:8081 ssl:None [Host is unreachable]
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/websocket_api/commands.py", line 121, in handle_call_service
-    connection.context(msg))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/entity_component.py", line 194, in handle_service
-    required_features
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/service.py", line 316, in entity_service_call
-    future.result()  # pop exception if have
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/service.py", line 337, in _handle_service_platform_call
-    await getattr(entity, func)(**data)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/template/light.py", line 223, in async_turn_off
-    await self._off_script.async_run(context=self._context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 131, in async_run
-    await self._handle_action(action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 210, in _handle_action
-    action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 299, in _async_call_service
-    context=context
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/service.py", line 89, in async_call_from_config
-    domain, service_name, service_data, blocking=blocking, context=context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 113, in async_service_handler
-    _LOGGER.error("Client error %s.", request.url)
-UnboundLocalError: local variable 'request' referenced before assignment
-2019-05-23 23:47:45 ERROR (MainThread) [homeassistant.components.websocket_api.http.connection.1822299056] local variable 'request' referenced before assignment
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 924, in _wrap_create_connection
-    await self._loop.create_connection(*args, **kwargs))
-  File "uvloop/loop.pyx", line 1904, in create_connection
-  File "uvloop/loop.pyx", line 1883, in uvloop.loop.Loop.create_connection
-OSError: [Errno 113] Host is unreachable
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 100, in async_service_handler
-    headers=headers
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/client.py", line 476, in _request
-    timeout=real_timeout
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 522, in connect
-    proto = await self._create_connection(req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 854, in _create_connection
-    req, traces, timeout)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 992, in _create_direct_connection
-    raise last_exc
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 974, in _create_direct_connection
-    req=req, client_error=client_error)
-  File "/usr/local/lib/python3.7/site-packages/aiohttp/connector.py", line 931, in _wrap_create_connection
-    raise client_error(req.connection_key, exc) from exc
-aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host 192.168.0.62:8081 ssl:None [Host is unreachable]
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/websocket_api/commands.py", line 121, in handle_call_service
-    connection.context(msg))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/light/__init__.py", line 297, in async_handle_light_on_service
-    await light.async_turn_on(**pars)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/template/light.py", line 216, in async_turn_on
-    await self._on_script.async_run()
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 131, in async_run
-    await self._handle_action(action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 210, in _handle_action
-    action, variables, context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/script.py", line 299, in _async_call_service
-    context=context
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/helpers/service.py", line 89, in async_call_from_config
-    domain, service_name, service_data, blocking=blocking, context=context)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1141, in async_call
-    self._execute_service(handler, service_call))
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/core.py", line 1163, in _execute_service
-    await handler.func(service_call)
-  File "/usr/local/lib/python3.7/site-packages/homeassistant/components/rest_command/__init__.py", line 113, in async_service_handler
-    _LOGGER.error("Client error %s.", request.url)
-UnboundLocalError: local variable 'request' referenced before assignment
-2019-05-23 23:52:11 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.71', 'port': 54321, 'hostname': 'yeelink-light-color1_miio57704721.local.', 'properties': {'epoch': '1', 'mac': '34ce008e8d5e'}, 'mac_address': '34ce008e8d5e', 'device_type': 'color1'}
-2019-05-23 23:52:11 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.73', 'port': 54321, 'hostname': 'yeelink-light-color2_miio131155263.local.', 'properties': {'epoch': '1', 'mac': '04cf8c84b46d'}, 'mac_address': '04cf8c84b46d', 'device_type': 'color2'}
-2019-05-23 23:52:11 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.74', 'port': 54321, 'hostname': 'yeelink-light-color2_miio133505534.local.', 'properties': {'epoch': '1', 'mac': '04cf8ca8912c'}, 'mac_address': '04cf8ca8912c', 'device_type': 'color2'}
-2019-05-23 23:52:11 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.72', 'port': 54321, 'hostname': 'yeelink-light-color1_miio57798391.local.', 'properties': {'epoch': '1', 'mac': '34ce008ffb44'}, 'mac_address': '34ce008ffb44', 'device_type': 'color1'}
+2019-05-24 02:12:54 INFO (MainThread) [homeassistant.setup] Setup of domain logger took 0.0 seconds.
+2019-05-24 02:12:54 INFO (MainThread) [homeassistant.setup] Setting up http
+2019-05-24 02:12:54 INFO (MainThread) [homeassistant.setup] Setup of domain http took 0.0 seconds.
+2019-05-24 02:12:54 INFO (MainThread) [homeassistant.setup] Setting up system_log
+2019-05-24 02:12:54 INFO (MainThread) [homeassistant.setup] Setup of domain system_log took 0.0 seconds.
+2019-05-24 02:12:54 INFO (MainThread) [homeassistant.setup] Setting up recorder
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setup of domain recorder took 1.1 seconds.
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up tuya
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up zone
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setup of domain zone took 0.0 seconds.
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up lovelace
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setup of domain lovelace took 0.0 seconds.
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up person
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up rest_command
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setup of domain rest_command took 0.0 seconds.
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up yeelight
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up updater
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setup of domain updater took 0.0 seconds.
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up group
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setup of domain group took 0.0 seconds.
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up input_boolean
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up input_number
+2019-05-24 02:12:55 INFO (MainThread) [homeassistant.setup] Setting up discovery
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain discovery took 0.5 seconds.
+2019-05-24 02:12:56 INFO (SyncWorker_7) [homeassistant.loader] Loaded rpi_gpio from homeassistant.components.rpi_gpio
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up sun
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain sun took 0.1 seconds.
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up xiaomi_aqara
+2019-05-24 02:12:56 INFO (SyncWorker_18) [homeassistant.loader] Loaded time_date from homeassistant.components.time_date
+2019-05-24 02:12:56 INFO (SyncWorker_11) [homeassistant.components.xiaomi_aqara] Discovering Xiaomi Gateways (Try 1)
+2019-05-24 02:12:56 INFO (SyncWorker_11) [xiaomi_gateway] Xiaomi Gateway 7811dcb1f087 found at IP 192.168.0.191
+2019-05-24 02:12:56 INFO (SyncWorker_11) [xiaomi_gateway] Discovering Xiaomi Devices
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up system_health
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain system_health took 0.0 seconds.
+2019-05-24 02:12:56 INFO (SyncWorker_14) [homeassistant.loader] Loaded template from homeassistant.components.template
+2019-05-24 02:12:56 INFO (SyncWorker_11) [xiaomi_gateway] Found 6 devices
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up websocket_api
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain websocket_api took 0.0 seconds.
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up webhook
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain webhook took 0.0 seconds.
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up api
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up script
+2019-05-24 02:12:56 INFO (SyncWorker_12) [homeassistant.loader] Loaded ping from homeassistant.components.ping
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up history
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain history took 0.0 seconds.
+2019-05-24 02:12:56 INFO (SyncWorker_2) [homeassistant.loader] Loaded xiaomi_miio from homeassistant.components.xiaomi_miio
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up conversation
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain conversation took 0.0 seconds.
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up auth
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain auth took 0.0 seconds.
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up config
+2019-05-24 02:12:56 INFO (SyncWorker_17) [homeassistant.loader] Loaded dht from homeassistant.components.dht
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up binary_sensor
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain api took 0.3 seconds.
+2019-05-24 02:12:56 INFO (SyncWorker_5) [homeassistant.loader] Loaded nmap_tracker from homeassistant.components.nmap_tracker
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up light
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setup of domain yeelight took 1.2 seconds.
+2019-05-24 02:12:56 INFO (MainThread) [homeassistant.setup] Setting up switch
+2019-05-24 02:12:57 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.template
+2019-05-24 02:12:57 INFO (MainThread) [homeassistant.setup] Setting up automation
+2019-05-24 02:12:58 INFO (MainThread) [homeassistant.setup] Setting up cloud
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.setup] Setup of domain script took 2.7 seconds.
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.components.light] Setting up light.template
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.components.light] Setting up light.group
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.components.light] Setting up light.xiaomi_miio
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.setup] Setting up onboarding
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.setup] Setup of domain config took 2.6 seconds.
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.components.switch] Setting up switch.template
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.setup] Setting up rpi_gpio
+2019-05-24 02:12:59 INFO (SyncWorker_19) [homeassistant.loader] Loaded command_line from homeassistant.components.command_line
+2019-05-24 02:12:59 INFO (MainThread) [homeassistant.setup] Setting up device_tracker
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.xiaomi_miio.light] Initializing with host 192.168.0.150 (token 9fb9e...)
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setting up zeroconf
+2019-05-24 02:13:00 INFO (SyncWorker_16) [homeassistant.loader] Loaded scene from homeassistant.components.scene
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setting up sensor
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain cloud took 2.2 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.command_line
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.dht
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.time_date
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.template
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.device_tracker] Setting up device_tracker.nmap_tracker
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.device_tracker] Setting up device_tracker.ping
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain onboarding took 1.1 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain rpi_gpio took 1.1 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setting up scene
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain scene took 0.0 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain person took 4.9 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain automation took 3.4 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.rpi_gpio
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.rpi_gpio
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.components.switch] Setting up switch.rpi_gpio
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain tuya took 5.1 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain input_boolean took 4.8 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setup of domain input_number took 4.8 seconds.
+2019-05-24 02:13:00 INFO (MainThread) [homeassistant.setup] Setting up frontend
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.scene] Setting up scene.tuya
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain zeroconf took 1.2 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain switch took 4.4 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain frontend took 0.8 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.light] Setting up light.switch
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.switch] Setting up switch.tuya
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setting up panel_custom
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain panel_custom took 0.0 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setting up map
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain map took 0.0 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setting up logbook
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain logbook took 0.0 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain sensor took 1.1 seconds.
+2019-05-24 02:13:01 INFO (SyncWorker_11) [xiaomi_gateway] Gateway discovery finished in 5 seconds
+2019-05-24 02:13:01 INFO (SyncWorker_11) [xiaomi_gateway] Creating Multicast Socket
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setting up hassio
+2019-05-24 02:13:01 INFO (SyncWorker_2) [homeassistant.loader] Loaded lock from homeassistant.components.lock
+2019-05-24 02:13:01 INFO (SyncWorker_13) [homeassistant.loader] Loaded cover from homeassistant.components.cover
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain light took 4.7 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.light] Setting up light.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setting up lock
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain lock took 0.0 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setting up cover
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain cover took 0.0 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain xiaomi_aqara took 5.3 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.sensor] Setting up sensor.xiaomi_aqara
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.switch] Setting up switch.xiaomi_aqara
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.light] Setting up light.xiaomi_aqara
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.lock] Setting up lock.xiaomi_aqara
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.cover] Setting up cover.xiaomi_aqara
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain binary_sensor took 4.9 seconds.
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.yeelight
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.components.binary_sensor] Setting up binary_sensor.xiaomi_aqara
+2019-05-24 02:13:01 INFO (MainThread) [homeassistant.setup] Setup of domain hassio took 0.4 seconds.
+2019-05-24 02:13:12 INFO (MainThread) [homeassistant.setup] Setup of domain device_tracker took 13.4 seconds.
+2019-05-24 02:13:12 INFO (MainThread) [homeassistant.setup] Setting up mobile_app
+2019-05-24 02:13:12 INFO (MainThread) [homeassistant.setup] Setup of domain mobile_app took 0.0 seconds.
+2019-05-24 02:13:12 INFO (SyncWorker_7) [homeassistant.loader] Loaded notify from homeassistant.components.notify
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.setup] Setting up default_config
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.setup] Setting up notify
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.setup] Setup of domain notify took 0.0 seconds.
+2019-05-24 02:13:13 INFO (SyncWorker_2) [homeassistant.loader] Loaded stream from homeassistant.components.stream
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.components.notify] Setting up notify.mobile_app
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.setup] Setting up stream
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.setup] Setup of domain stream took 0.0 seconds.
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.setup] Setup of domain default_config took 0.0 seconds.
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.bootstrap] Home Assistant initialized in 20.25s
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.core] Starting Home Assistant
+2019-05-24 02:13:13 INFO (MainThread) [homeassistant.core] Timer:starting
+2019-05-24 02:13:15 INFO (SyncWorker_9) [homeassistant.loader] Loaded axis from homeassistant.components.axis
+2019-05-24 02:13:16 INFO (SyncWorker_12) [homeassistant.loader] Loaded ifttt from homeassistant.components.ifttt
+2019-05-24 02:13:17 INFO (SyncWorker_6) [homeassistant.loader] Loaded logi_circle from homeassistant.components.logi_circle
+2019-05-24 02:13:17 INFO (SyncWorker_0) [homeassistant.loader] Loaded mqtt from homeassistant.components.mqtt
+2019-05-24 02:13:18 INFO (SyncWorker_13) [homeassistant.loader] Loaded openuv from homeassistant.components.openuv
+2019-05-24 02:13:18 INFO (SyncWorker_2) [homeassistant.loader] Loaded mailgun from homeassistant.components.mailgun
+2019-05-24 02:13:18 INFO (SyncWorker_9) [homeassistant.loader] Loaded zwave from homeassistant.components.zwave
+2019-05-24 02:13:18 INFO (SyncWorker_1) [homeassistant.loader] Loaded ambiclimate from homeassistant.components.ambiclimate
+2019-05-24 02:13:18 INFO (SyncWorker_18) [homeassistant.loader] Loaded hangouts from homeassistant.components.hangouts
+2019-05-24 02:13:18 INFO (SyncWorker_14) [homeassistant.loader] Loaded geofency from homeassistant.components.geofency
+2019-05-24 02:13:18 INFO (SyncWorker_7) [homeassistant.loader] Loaded zha from homeassistant.components.zha
+2019-05-24 02:13:18 INFO (SyncWorker_16) [homeassistant.loader] Loaded upnp from homeassistant.components.upnp
+2019-05-24 02:13:18 INFO (SyncWorker_0) [homeassistant.loader] Loaded ios from homeassistant.components.ios
+2019-05-24 02:13:18 INFO (SyncWorker_12) [homeassistant.loader] Loaded unifi from homeassistant.components.unifi
+2019-05-24 02:13:18 INFO (SyncWorker_3) [homeassistant.loader] Loaded owntracks from homeassistant.components.owntracks
+2019-05-24 02:13:18 INFO (SyncWorker_5) [homeassistant.loader] Loaded rainmachine from homeassistant.components.rainmachine
+2019-05-24 02:13:18 INFO (SyncWorker_19) [homeassistant.loader] Loaded deconz from homeassistant.components.deconz
+2019-05-24 02:13:18 INFO (SyncWorker_1) [homeassistant.loader] Loaded simplisafe from homeassistant.components.simplisafe
+2019-05-24 02:13:18 INFO (SyncWorker_6) [homeassistant.loader] Loaded point from homeassistant.components.point
+2019-05-24 02:13:18 INFO (SyncWorker_14) [homeassistant.loader] Loaded tellduslive from homeassistant.components.tellduslive
+2019-05-24 02:13:18 INFO (SyncWorker_7) [homeassistant.loader] Loaded luftdaten from homeassistant.components.luftdaten
+2019-05-24 02:13:18 INFO (SyncWorker_16) [homeassistant.loader] Loaded homematicip_cloud from homeassistant.components.homematicip_cloud
+2019-05-24 02:13:18 INFO (SyncWorker_0) [homeassistant.loader] Loaded toon from homeassistant.components.toon
+2019-05-24 02:13:18 INFO (SyncWorker_12) [homeassistant.loader] Loaded ps4 from homeassistant.components.ps4
+2019-05-24 02:13:18 INFO (SyncWorker_3) [homeassistant.loader] Loaded locative from homeassistant.components.locative
+2019-05-24 02:13:18 INFO (SyncWorker_11) [homeassistant.loader] Loaded hue from homeassistant.components.hue
+2019-05-24 02:13:18 INFO (SyncWorker_1) [homeassistant.loader] Loaded esphome from homeassistant.components.esphome
+2019-05-24 02:13:18 INFO (SyncWorker_17) [homeassistant.loader] Loaded sonos from homeassistant.components.sonos
+2019-05-24 02:13:18 INFO (SyncWorker_8) [homeassistant.loader] Loaded twilio from homeassistant.components.twilio
+2019-05-24 02:13:18 INFO (SyncWorker_4) [homeassistant.loader] Loaded cast from homeassistant.components.cast
+2019-05-24 02:13:18 INFO (SyncWorker_10) [homeassistant.loader] Loaded daikin from homeassistant.components.daikin
+2019-05-24 02:13:18 INFO (SyncWorker_0) [homeassistant.loader] Loaded dialogflow from homeassistant.components.dialogflow
+2019-05-24 02:13:18 INFO (SyncWorker_2) [homeassistant.loader] Loaded tradfri from homeassistant.components.tradfri
+2019-05-24 02:13:18 INFO (SyncWorker_5) [homeassistant.loader] Loaded gpslogger from homeassistant.components.gpslogger
+2019-05-24 02:13:18 INFO (SyncWorker_3) [homeassistant.loader] Loaded tplink from homeassistant.components.tplink
+2019-05-24 02:13:18 INFO (SyncWorker_11) [homeassistant.loader] Loaded ambient_station from homeassistant.components.ambient_station
+2019-05-24 02:13:18 INFO (SyncWorker_1) [homeassistant.loader] Loaded heos from homeassistant.components.heos
+2019-05-24 02:13:18 INFO (SyncWorker_17) [homeassistant.loader] Loaded smhi from homeassistant.components.smhi
+2019-05-24 02:13:18 INFO (SyncWorker_8) [homeassistant.loader] Loaded lifx from homeassistant.components.lifx
+2019-05-24 02:13:18 INFO (SyncWorker_4) [homeassistant.loader] Loaded ipma from homeassistant.components.ipma
+2019-05-24 02:13:18 INFO (SyncWorker_10) [homeassistant.loader] Loaded smartthings from homeassistant.components.smartthings
+2019-05-24 02:13:18 INFO (SyncWorker_0) [homeassistant.loader] Loaded nest from homeassistant.components.nest
+2019-05-24 02:13:18 INFO (SyncWorker_2) [homeassistant.loader] Loaded emulated_roku from homeassistant.components.emulated_roku
+2019-05-24 02:13:27 INFO (MainThread) [homeassistant.components.discovery] Unknown service discovered: home_assistant {'host': '192.168.0.220', 'port': 8123, 'hostname': 'Home._home-assistant._tcp.local.', 'properties': {'version': '0.93.2', 'base_url': 'http://192.168.0.240:8123', 'requires_api_password': True}}
+2019-05-24 02:13:27 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.74', 'port': 54321, 'hostname': 'yeelink-light-color2_miio133505534.local.', 'properties': {'epoch': '1', 'mac': '04cf8ca8912c'}, 'mac_address': '04cf8ca8912c', 'device_type': 'color2'}
+2019-05-24 02:13:27 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.71', 'port': 54321, 'hostname': 'yeelink-light-color1_miio57704721.local.', 'properties': {'epoch': '1', 'mac': '34ce008e8d5e'}, 'mac_address': '34ce008e8d5e', 'device_type': 'color1'}
+2019-05-24 02:13:27 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.72', 'port': 54321, 'hostname': 'yeelink-light-color1_miio57798391.local.', 'properties': {'epoch': '1', 'mac': '34ce008ffb44'}, 'mac_address': '34ce008ffb44', 'device_type': 'color1'}
+2019-05-24 02:13:27 INFO (MainThread) [homeassistant.components.discovery] Ignoring service: yeelight {'host': '192.168.0.73', 'port': 54321, 'hostname': 'yeelink-light-color2_miio131155263.local.', 'properties': {'epoch': '1', 'mac': '04cf8c84b46d'}, 'mac_address': '04cf8c84b46d', 'device_type': 'color2'}
+2019-05-24 02:13:27 INFO (MainThread) [homeassistant.components.discovery] Found new service: xiaomi_gw {'host': '192.168.0.191', 'port': 54321, 'hostname': 'lumi-gateway-v3_miio78431457.local.', 'properties': {'epoch': '1', 'mac': '7811dcb1f087'}, 'mac_address': '7811dcb1f087'}

@@ -1,0 +1,110 @@
+light.hq_lights: 
+  icon: mdi:ceiling-light 
+  unit_of_measurement: lmn
+
+switch.power_strip_sockets_usb: 
+  icon: mdi:play-network 
+  friendly_name: Powerstrip Plugs USB 
+switch.power_strip_socket_1:    
+  icon: mdi:power-socket 
+  friendly_name: Powerstrip Plug 1 
+switch.power_strip_socket_2:    
+  icon: mdi:power-socket 
+  friendly_name: Powerstrip Plug 2 
+switch.power_strip_socket_3:    
+  icon: mdi:power-socket 
+  friendly_name: Powerstrip Plug 3 
+switch.power_strip_socket_4:    
+  icon: mdi:power-socket 
+  friendly_name: Powerstrip Plug 4 
+switch.plug_xiaomi_01:          
+  icon: mdi:battery 
+switch.hass_led:                
+  icon: mdi:led-on 
+switch.plug_tuya_3:
+  icon: mdi:power-plug
+
+device_tracker.mi5_cx: 
+  icon: mdi:phone 
+device_tracker.orange_pi_pc: 
+  icon: mdi:raspberry-pi 
+device_tracker.orange_pi_3: 
+  icon: mdi:raspberry-pi 
+device_tracker.orange_pi_3_wi: 
+  icon: mdi:raspberry-pi 
+device_tracker.raspberry_pi_plus: 
+  icon: mdi:raspberry-pi 
+device_tracker.raspberry_pi_plus_wi: 
+  icon: mdi:raspberry-pi 
+device_tracker.orange_pi_zero_plus: 
+  icon: mdi:raspberry-pi 
+device_tracker.orange_pi_zero_plus_wi: 
+  icon: mdi:raspberry-pi 
+
+scene.pechkata_on:  
+  icon: mdi:radiator 
+scene.pechkata_off: 
+  icon: mdi:radiator-disabled 
+scene.plug_tuya_2_led_off:
+  icon: mdi:lightbulb 
+scene.plug_tuya_2_led_on:  
+  icon: mdi:lightbulb 
+scene.plug_tuya_2_off:     
+  icon: mdi:car-light-fog 
+scene.plug_tuya_2_on:     
+  icon: mdi:car-light-high 
+
+script.lights_full:  
+  icon: mdi:lightbulb-on 
+script.lights_nice:  
+  icon: mdi:lightbulb-on 
+script.lights_dimmer:  
+  icon: mdi:lightbulb-on 
+script.lights_dim:  
+  icon: mdi:lightbulb-on 
+script.lights_off:  
+  icon: mdi:sleep 
+
+script.pechka_10min:  
+  icon: mdi:radiator 
+script.pechka_30min:  
+  icon: mdi:radiator 
+script.pechka_60min:  
+  icon: mdi:radiator 
+script.pechka_90min:  
+  icon: mdi:radiator 
+ 
+####
+  
+light.bulb_11: 
+  friendly_name: HQ Bulb 1 
+light.bulb_12: 
+  friendly_name: HQ Bulb 2 
+light.bulb_13: 
+  friendly_name: HQ Bulb 3 
+light.bulb_21: 
+  friendly_name: HQ Decor Bulb 
+light.wall_ewe62: 
+  friendly_name: Kitchen Lights 
+light.wall_ewe61: 
+  friendly_name: Hall Lights 
+light.workdesk_headlamp: 
+  icon: mdi:spotlight-beam 
+light.xiaomi_philips_candle: 
+  friendly_name: "Hall Candle" 
+  icon: mdi:candle 
+light.mi_gateway_light:
+  icon: mdi:circle-double
+
+
+timer.za_pechkata: 
+  device_class: sensor 
+
+####
+
+# scene.pechkata_sync_led_on:      hidden: true 
+# scene.pechkata_sync_led_off:     hidden: true 
+# input_boolean.pechkata:          hidden: true 
+# binary_sensor.mi_aqara_cube:     hidden: true 
+# binary_sensor.mi_button_bidabed: hidden: true 
+# binary_sensor.mi_button_bidador: hidden: true 

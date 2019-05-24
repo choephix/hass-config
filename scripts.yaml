@@ -105,7 +105,7 @@ lights_dimmer:
         entity_id: light.bulb_13
 
 lights_off:
-  alias: Dimmer Lights
+  alias: All Lights OFF
   sequence:
     - service: light.turn_off
       entity_id: light.hq_lights

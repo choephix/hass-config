@@ -187,7 +187,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.switch_mi_bidabed
+      entity_id: binary_sensor.mi_button_bidabed
       click_type: single
   condition:
     condition: state
@@ -204,7 +204,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.switch_mi_bidabed
+      entity_id: binary_sensor.mi_button_bidabed
       click_type: single
   condition:
     condition: state
@@ -220,7 +220,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.switch_mi_bidabed
+      entity_id: binary_sensor.mi_button_bidabed
       click_type: double
   action:
   - service: script.turn_on
@@ -232,7 +232,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.switch_mi_bidabed
+      entity_id: binary_sensor.mi_button_bidabed
       click_type: long_click_press
   action:
   - service: switch.toggle
@@ -243,7 +243,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.switch_mi_bidador
+      entity_id: binary_sensor.mi_button_bidador
       click_type: single
   action:
   - service: light.toggle
@@ -255,7 +255,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.switch_mi_bidador
+      entity_id: binary_sensor.mi_button_bidador
       click_type: double
   action:
   - service: light.turn_off
@@ -269,7 +269,7 @@
     platform: event
     event_type: xiaomi_aqara.click
     event_data:
-      entity_id: binary_sensor.switch_mi_bidador
+      entity_id: binary_sensor.mi_button_bidador
       click_type: long_click_press
   action:
     service: switch.toggle

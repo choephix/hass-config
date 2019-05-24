@@ -51,7 +51,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "switch.power_strip_socket_1",
-                "name": null,
+                "name": "",
                 "platform": "tuya",
                 "unique_id": "tuya.86371672dc4f22e58b28_1"
             },
@@ -105,7 +105,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "switch.plug_xiaomi_1",
-                "name": null,
+                "name": "\u0411\u043e\u0439\u043b\u0435\u0440\u0430",
                 "platform": "xiaomi_aqara",
                 "unique_id": "status158d0002677e38"
             },
@@ -239,19 +239,19 @@
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "binary_sensor.switch_mi_bidador",
-                "name": null,
+                "entity_id": "binary_sensor.mi_button_bidabed",
+                "name": "Mi Button BIDABED",
                 "platform": "xiaomi_aqara",
-                "unique_id": "status158d0001f35906"
+                "unique_id": "status158d0001f3dfaf"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "binary_sensor.switch_mi_bidabed",
-                "name": null,
+                "entity_id": "binary_sensor.mi_button_bidador",
+                "name": "Mi Button BIDADOR",
                 "platform": "xiaomi_aqara",
-                "unique_id": "status158d0001f3dfaf"
+                "unique_id": "status158d0001f35906"
             }
         ]
     },
