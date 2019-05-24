@@ -54,3 +54,11 @@ orange_pi_pc:
   name: orange pi pc
   picture:
   track: true
+
+orange_pi_pc_wi:
+  hide_if_away: false
+  icon:
+  mac:
+  name: orange pi pc wi
+  picture:
+  track: true

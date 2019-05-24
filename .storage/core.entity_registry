@@ -249,7 +249,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "binary_sensor.mi_aqara_cube",
-                "name": null,
+                "name": "Mi Aqara Cube",
                 "platform": "xiaomi_aqara",
                 "unique_id": "status158d000276e414"
             }

@@ -1,7 +1,13 @@
+person.choephix:
+  icon: mdi:account-circle
+  show_last_changed: true
+
 light.hq_lights: 
   icon: mdi:ceiling-light 
   unit_of_measurement: lmn
 
+sensor.pechkata_timer:
+  show_last_changed: true
 sensor.mi5_battery:
   icon: mdi:battery-50
 sensor.cpu_temperature:
@@ -12,17 +18,18 @@ sensor.plug_xiaomi_1_power_current:
   icon: mdi:flash
 sensor.plug_xiaomi_1_power_consumed:
   icon: mdi:flash-auto
+  show_last_changed: true
 sensor.dht_sensor_humidity:
   icon: mdi:water-percent
   friendly_name: Kitchen Humidity
 sensor.dht_sensor_temperature:
   friendly_name: Kitchen Temperature
 sensor.last_changed_boiler:
-  icon: mdi:timelapse
+  icon: mdi:clock-outline
 sensor.last_changed_pir_hall:
-  icon: mdi:timelapse
+  icon: mdi:clock-outline
 sensor.last_changed_pir_kitchen:
-  icon: mdi:timelapse
+  icon: mdi:clock-outline
 
 switch.power_strip_sockets_usb: 
   icon: mdi:usb
@@ -48,8 +55,10 @@ switch.plug_tuya_3:
   hidden: true
 
 device_tracker.mi5_cx: 
-  icon: mdi:phone 
+  icon: mdi:cellphone-android 
 device_tracker.orange_pi_pc: 
+  icon: mdi:raspberry-pi 
+device_tracker.orange_pi_pc_wi: 
   icon: mdi:raspberry-pi 
 device_tracker.orange_pi_3: 
   icon: mdi:raspberry-pi 

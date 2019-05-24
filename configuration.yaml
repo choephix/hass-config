@@ -7,11 +7,16 @@ homeassistant:
   time_zone: Europe/Sofia
   customize: !include customize.yaml
   customize_domain:
-    automation:    { hidden: true }
-    input_boolean: { hidden: true }
-    input_number:  { hidden: true }
-    scene:         { hidden: true }
+    automation:     { hidden: true }
+    input_boolean:  { hidden: true }
+    input_number:   { hidden: true }
+    scene:          { hidden: true }
+    device_tracker: { hidden: true, show_last_changed: true }
+    binary_sensor:  { hidden: true, show_last_changed: true }
+    person:         { show_last_changed: true }
   customize_glob:
+    "binary_sensor.*":  { show_last_changed: true }
+    "device_tracker.*": { show_last_changed: true }
     "sensor.weather_*": { hidden: true }
     "switch.power_strip_countdown_*": { hidden: true }
     "binary_sensor.mi_*": { hidden: true }
@@ -224,12 +229,7 @@ switch:
             entity_id: input_number.heat_duration
             data:
               value: 0
-        icon_template: >-
-          {% if ( ( states.input_number.heat_duration.state | int ) > 0 ) %}
-            mdi:radiator
-          {% else %}
-            mdi:radiator-disabled
-          {% endif %}
+        icon_template: "{% if ( states.input_number.heat_duration.state | int ) %}mdi:radiator{% else %}mdi:radiator-disabled{% endif %}"
 
 # # # # # # # #
 
@@ -250,8 +250,7 @@ binary_sensor:
     sensors:
       boiler_heating:
         friendly_name: "Water Heating"
-        value_template: >-
-          {{ states.switch.plug_xiaomi_1.attributes.load_power|float > 10 }}
+        value_template: "{{ states.switch.plug_xiaomi_1.attributes.load_power|float > 10 }}"
       
 sensor:
   - platform: time_date
@@ -287,13 +286,13 @@ sensor:
         friendly_name: 'Бойлер Consumed Power' 
         unit_of_measurement: 'Wh'
       last_changed_pir_hall:
-        value_template: '{{ ( states.binary_sensor.pir_hall.last_changed | timestamp_custom("%H:%M:%S", 0) ) }}'
+        value_template: '{{ relative_time(states.binary_sensor.pir_hall.last_updated) }}{{ states.sensor.time.state[0:0] }}'
         friendly_name: 'Hall Last Motion'
       last_changed_pir_kitchen:
-        value_template: '{{ now() - states.binary_sensor.pir_kitchen.last_changed }}'
+        value_template: "{{ relative_time(states.binary_sensor.pir_kitchen.last_changed) }}{{ states.sensor.time.state[0:0] }}"
         friendly_name: 'Kitchen Last Motion'
       last_changed_boiler:
-        value_template: '{{ (as_timestamp(now()) - as_timestamp(states.binary_sensor.boiler_heating.last_changed)) }}'
+        value_template: '{{ relative_time(states.binary_sensor.boiler_heating.last_changed) }}{{ states.sensor.time.state[0:0] }}'
         friendly_name: 'Boiler Last Active'
       sun_elevation:
         value_template: '{{ states.sun.sun.attributes.elevation }}'

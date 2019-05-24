@@ -59,6 +59,7 @@ water_heating:
   - switch.plug_xiaomi_1
   - binary_sensor.boiler_heating
   - sensor.plug_xiaomi_1_power_current
+  - sensor.last_changed_boiler
 
 Switches:
   icon: mdi:plug
@@ -87,7 +88,7 @@ dev_devices:
   entities:
   - sensor.cpu_temperature
   - device_tracker.orange_pi_pc
-  #- device_tracker.orange_pi_pc_wi
+  - device_tracker.orange_pi_pc_wi
   - device_tracker.orange_pi_3 
   #- device_tracker.orange_pi_3_wi
   - device_tracker.raspberry_pi_plus
@@ -104,9 +105,8 @@ Crap+:
   - sun.sun
   - sensor.sun_elevation
   - binary_sensor.pir_hall
-  - binary_sensor.pir_kitchen
-  - sensor.last_changed_boiler
   - sensor.last_changed_pir_hall
+  - binary_sensor.pir_kitchen
   - sensor.last_changed_pir_kitchen
   - sensor.mi_illumination_01
   - binary_sensor.bb_button_1
