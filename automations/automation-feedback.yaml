@@ -98,7 +98,7 @@
     - service: xiaomi_aqara.play_ringtone
       data: { ringtone_vol: 25, ringtone_id: 10011 }
     
-- alias: Button BIDABED (single) -- Good Morning
+- alias: Feedback - Button BIDABED (single) -- Good Morning
   trigger:
     - platform: event
       event_type: xiaomi_aqara.click
@@ -111,7 +111,7 @@
     - service: xiaomi_aqara.play_ringtone
       data: { ringtone_vol: 25, ringtone_id: 10022 }
       
-- alias: Button BIDABED (double) -- Dim dem lites
+- alias: Feedback - Button BIDABED (double) -- Dim dem lites
   trigger:
     - platform: event
       event_type: xiaomi_aqara.click
@@ -120,7 +120,7 @@
     - service: xiaomi_aqara.play_ringtone
       data: { ringtone_vol: 15, ringtone_id: 10010 }
 
-- alias: Button BIDADOR (single)
+- alias: Feedback - Button BIDADOR (single)
   trigger:
     - platform: event
       event_type: xiaomi_aqara.click
@@ -129,7 +129,7 @@
     - service: xiaomi_aqara.play_ringtone
       data: { ringtone_vol: 10, ringtone_id: 10019 }
     
-- alias: Button BIDADOR (double)
+- alias: Feedback - Button BIDADOR (double)
   trigger:
     - platform: event
       event_type: xiaomi_aqara.click
