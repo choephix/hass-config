@@ -1,37 +1,325 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
   name: Home
-  # Location required to calculate the time the sun rises and sets
-  latitude: 43.2184
-  longitude: 27.9124
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 0
-  # metric for Metric, imperial for Imperial
+  latitude:  43.2081448
+  longitude: 27.920058
+  elevation: 35
   unit_system: metric
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Sofia
-  # Customization file
   customize: !include customize.yaml
+  customize_domain:
+    automation:
+      hidden: true
+    input_boolean: 
+      hidden: true
+    input_number: 
+      hidden: true
+  customize_glob:
+    "sensor.weather_*":
+      hidden: true
+    "switch.power_strip_countdown_*":
+      hidden: true
 
-# Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
-#   base_url: example.duckdns.org:8123
+http:
+  base_url: 192.168.0.240:8123
 
-# Discover some devices automatically
+logger:
+  default: info
+  logs:
+    homeassistant.components.automation: warning
+    homeassistant.helpers.script: warning
+
 discovery:
+  ignore:
+    - yeelight
 
-# Sensors
+history:
+  exclude:
+    domains:
+      - automation
+      - script
+      - group
+      - scene
+      - weblink
+    entities:
+      - sensor.time
+      - sensor.pechkata_timer
+      - sensor.last_changed_boiler
+      - sensor.last_changed_pir_hall
+      - sensor.last_changed_pir_kitchen
+      - light.hq_lights
+      - binary_sensor.bb_button_1
+      - binary_sensor.bb_button_2
+      - binary_sensor.bb_button_3
+      - binary_sensor.bb_button_4
+      - binary_sensor.bb_button_5
+    
+system_health:
+    
+# # # # # # # #
+
+device_tracker:
+  - platform: ping
+    count: 2
+    hosts:
+      orange_pi_pc:           192.168.0.210
+      orange_pi_3:            192.168.0.230
+      orange_pi_3_wi:         192.168.0.231
+      raspberry_pi_plus:      192.168.0.240
+      raspberry_pi_plus_wi:   192.168.0.241
+      orange_pi_zero_plus:    192.168.0.250
+      orange_pi_zero_plus_wi: 192.168.0.251
+  - platform: nmap_tracker
+    hosts:
+      # - 192.168.0.165 # mi5
+      # - 192.168.0.184 #
+      # - 192.168.0.177 #
+
+rest_command:
+  vhome61_on:
+    url: http://192.168.0.61:8081/zeroconf/switch
+    method: POST
+    headers:
+        cache-control: "no-store"
+    payload: '{"sequence":"force_on","deviceid":"x","selfApikey":"x","iv":"NjU3ODU4ODY3MjQyNzUwMw==","encrypt":true,"data":"AWza9cwpLRwcSFQeSl5e2A=="}'
+    verify_ssl: false
+  vhome61_off:
+    url: http://192.168.0.61:8081/zeroconf/switch
+    method: POST
+    headers:
+        cache-control: "no-store"
+    payload: '{"sequence":"force_off","deviceid":"x","selfApikey":"x","iv":"OTMxMTQzMDI4ODE4MTIxNQ==","encrypt":true,"data":"IR3WzqNIJGkwOvzhbK+q3N20sVLSXZP9vS2jnESf53Q="}'
+    verify_ssl: false
+  vhome62_on:
+    url: http://192.168.0.62:8081/zeroconf/switch
+    method: POST
+    headers:
+        cache-control: "no-store"
+    payload: '{"sequence":"force_on","deviceid":"x","selfApikey":"x","iv":"Mzc0Njk3MjMwNTcyODgwMA==","encrypt":true,"data":"2eevsJm9I8wdM3u9Ll4E5Q=="}'
+    verify_ssl: false
+  vhome62_off:
+    url: http://192.168.0.62:8081/zeroconf/switch
+    method: POST
+    headers:
+        cache-control: "no-store"
+    payload: '{"sequence":"force_off","deviceid":"x","selfApikey":"x","iv":"Nzk2MzA5NjcxMjY0MzExOA==","encrypt":true,"data":"jDYyFpgkyl1bd64xT/pJqqYDeeoYrYG9L6v2DIDedrw="}'
+    verify_ssl: false
+
+tuya:
+  username: choephix@gmail.com
+  password: hjax0356
+  country_code: 359
+  platform: smart_life
+  
+xiaomi_aqara:
+  discovery_retry: 3
+  gateways:
+    - key: kgvblgcptzvwn62v
+
+yeelight:
+    devices:
+      192.168.0.71:
+        name: Bulb 11
+        transition: 500
+        model: color1
+      192.168.0.72:
+        name: Bulb 12
+        transition: 500
+        model: color1
+      192.168.0.73:
+        name: Bulb 13
+        transition: 500
+        model: color2
+      192.168.0.74:
+        name: Bulb 21
+        transition: 500
+        model: color2
+    
+# # # # # # # #
+
+input_boolean:
+  power_ewe61:
+  power_ewe62:
+  light_tuya2:
+
+input_number:
+  heat_duration:
+    min: 0
+    max: 7200
+    step: 1
+    mode: box
+    unit_of_measurement: sec
+    icon: mdi:timer
+
+light:
+  - platform: group
+    name: HQ Lights
+    entities:
+      - light.bulb_11
+      - light.bulb_12
+      - light.bulb_13
+  - platform: xiaomi_miio
+    name: Xiaomi Philips Candle
+    host: 192.168.0.150
+    token: 9fb9e28519168c4826f7fd4642b73e09
+    model: philips.light.candle
+  - platform: template
+    lights:
+      wall_ewe61:
+        value_template: "{{ states.input_boolean.power_ewe61.state }}"
+        turn_on:
+          - service: rest_command.vhome61_on
+          - service: input_boolean.turn_on
+            entity_id: input_boolean.power_ewe61
+        turn_off:
+          - service: rest_command.vhome61_off
+          - service: input_boolean.turn_off
+            entity_id: input_boolean.power_ewe61
+        icon_template: mdi:light-switch
+      wall_ewe62:
+        value_template: "{{ states.input_boolean.power_ewe62.state }}"
+        turn_on:
+          - service: rest_command.vhome62_on
+          - service: input_boolean.turn_on
+            entity_id: input_boolean.power_ewe62
+        turn_off:
+          - service: rest_command.vhome62_off
+          - service: input_boolean.turn_off
+            entity_id: input_boolean.power_ewe62
+        icon_template: mdi:light-switch
+      plug_tuya2_led:
+        value_template: "{{ states.input_boolean.light_tuya2.state }}"
+        turn_on:
+          - service: scene.turn_on
+            entity_id: scene.plug_tuya_2_led_on
+          - service: input_boolean.turn_on
+            entity_id: input_boolean.light_tuya2
+        turn_off:
+          - service: scene.turn_on
+            entity_id: scene.plug_tuya_2_led_off
+          - service: input_boolean.turn_off
+            entity_id: input_boolean.light_tuya2
+        icon_template: mdi:pokeball
+  - platform: switch
+    name: Workdesk Headlamp
+    entity_id: switch.plug_tuya_3
+    
+switch:
+  - platform: rpi_gpio
+    ports:
+      21: HASS LED
+  - platform: template
+    switches:
+      pechkata:
+        friendly_name: Печката
+        value_template: "{{ ( states.input_number.heat_duration.state | int ) > 0 }}"
+        turn_on:
+          - service: input_number.set_value
+            entity_id: input_number.heat_duration
+            data:
+              value: 30
+        turn_off:
+          - service: input_number.set_value
+            entity_id: input_number.heat_duration
+            data:
+              value: 0
+        icon_template: >-
+          {% if ( ( states.input_number.heat_duration.state | int ) > 0 ) %}
+            mdi:radiator
+          {% else %}
+            mdi:radiator-disabled
+          {% endif %}
+
+# # # # # # # #
+
+binary_sensor:
+  - platform: rpi_gpio
+    ports:
+      18: PIR Hall
+      20: PIR Kitchen
+  - platform: rpi_gpio
+    invert_logic: true
+    ports:
+      27: BB Button 1
+      22: BB Button 2
+      23: BB Button 3
+      6:  BB Button 4
+      5:  BB Button 5
+  - platform: template
+    sensors:
+      boiler_heating:
+        friendly_name: "Water Heating"
+        value_template: >-
+          {{ states.switch.plug_xiaomi_1.attributes.load_power|float > 10 }}
+      
 sensor:
-  # Weather prediction
-  - platform: yr
+  - platform: time_date
+    display_options: ['time']
+  - platform: dht
+    sensor: DHT22
+    pin: 19
+    monitored_conditions:
+      - temperature
+      - humidity
+  - platform: command_line
+    name: CPU Temperature
+    command: "cat /sys/class/thermal/thermal_zone0/temp"
+    scan_interval: 30
+    command_timeout: 5
+    unit_of_measurement: "°С"
+    value_template: '{{ value | multiply(0.001) | round(1) }}'
+  - platform: template
+    sensors:
+      pechkata_timer:
+        value_template: "{{ states.input_number.heat_duration.state | int | timestamp_custom('%H:%M:%S', 0) }}"
+        icon_template: mdi:timer
+      mi5_battery:
+        value_template: '{{ states.device_tracker.mi5_cx.attributes.battery }}'  
+        friendly_name: 'Phone Battery' 
+        unit_of_measurement: '%'
+      plug_xiaomi_1_power_current:
+        value_template: '{{ states.switch.plug_xiaomi_1.attributes.load_power|int }}'  
+        friendly_name: 'Бойлер Current Power' 
+        unit_of_measurement: 'W'
+      plug_xiaomi_1_power_consumed:
+        value_template: '{{ states.switch.plug_xiaomi_1.attributes.power_consumed|int }}'  
+        friendly_name: 'Бойлер Consumed Power' 
+        unit_of_measurement: 'Wh'
+      last_changed_pir_hall:
+        value_template: '{{ ( now() - states.binary_sensor.pir_hall.last_changed ) | int }}'  
+        friendly_name: 'Hall Last Motion' 
+      last_changed_pir_kitchen:
+        value_template: '{{ now() - states.binary_sensor.pir_kitchen.last_changed }}'  
+        friendly_name: 'Kitchen Last Motion'
+      sun_elevation:
+        value_template: '{{ states.sun.sun.attributes.elevation }}'  
+        friendly_name: 'Sun Elevation' 
+        unit_of_measurement: '°'
 
-# Text to speech
-tts:
-  - platform: google_translate
-
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+# # # # # # # #
+#  all the rest...
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -5,70 +5,106 @@
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "binary_sensor.switch_158d0001f35906",
+                "entity_id": "person.choephix",
                 "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "status158d0001f35906"
+                "platform": "person",
+                "unique_id": "99f1a91124fb4835b8813c58c81ea11f"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "binary_sensor.switch_158d0001f3dfaf",
+                "entity_id": "switch.power_strip_sockets_usb",
                 "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "status158d0001f3dfaf"
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_7"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "binary_sensor.cube_158d000276e414",
+                "entity_id": "switch.power_strip_socket_4",
                 "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "status158d000276e414"
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_4"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.illumination_7811dcb1f087",
+                "entity_id": "switch.power_strip_socket_3",
                 "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "illumination7811dcb1f087"
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_3"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.humidity_158d00025564cf",
+                "entity_id": "switch.power_strip_socket_2",
                 "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "humidity158d00025564cf"
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_2"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "sensor.temperature_158d00025564cf",
+                "entity_id": "switch.power_strip_socket_1",
                 "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "temperature158d00025564cf"
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_1"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "light.gateway_light_7811dcb1f087",
+                "entity_id": "switch.power_strip_countdown_usb",
                 "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "rgb7811dcb1f087"
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_105"
             },
             {
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "switch.plug_158d0002677e38",
+                "entity_id": "switch.power_strip_countdown_4",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_104"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.power_strip_countdown_3",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_103"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.power_strip_countdown_2",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_102"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.power_strip_countdown_1",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.86371672dc4f22e58b28_101"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "switch.plug_xiaomi_1",
                 "name": null,
                 "platform": "xiaomi_aqara",
                 "unique_id": "status158d0002677e38"
@@ -77,10 +113,145 @@
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "person.choephix",
+                "entity_id": "switch.plug_tuya_3",
+                "name": "Headlamp Plug",
+                "platform": "tuya",
+                "unique_id": "tuya.74603836cc50e3430253"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.mi_temperature_01",
                 "name": null,
-                "platform": "person",
-                "unique_id": "99f1a91124fb4835b8813c58c81ea11f"
+                "platform": "xiaomi_aqara",
+                "unique_id": "temperature158d00025564cf"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.mi_humidity_01",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "humidity158d00025564cf"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "sensor.mi_illumination_01",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "illumination7811dcb1f087"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.pechkata_on",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.WbwFlXVtgZAOhKpd"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.plug_tuya_2_led_off",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.H4IPtbTIwgNXPOAe"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.pechkata_sync_led_off",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.0Um2rHLiEsFp6HsK"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.plug_tuya_2_led_on",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.Awy3UZZMNsMi2oMJ"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.pechkata_sync_led_on",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.gA5VjC9pBuTw9w4i"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.plug_tuya_2_on",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.PXbAjU5soWU8uEol"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.plug_tuya_2_off",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.tuLhf3ZJ2HwowUp1"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "scene.pechkata_off",
+                "name": null,
+                "platform": "tuya",
+                "unique_id": "tuya.W6HzMiwcNoyXD6mz"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "light.mi_gateway_light",
+                "name": "Xiaomi Gateway Light",
+                "platform": "xiaomi_aqara",
+                "unique_id": "rgb7811dcb1f087"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.aqara_cube",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d000276e414"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.switch_mi_bidador",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001f35906"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.switch_mi_bidabed",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d0001f3dfaf"
             }
         ]
     },

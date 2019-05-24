@@ -1,0 +1,32 @@
+
+orange_pi_3:
+  hide_if_away: false
+  icon:
+  mac:
+  name: orange pi 3
+  picture:
+  track: true
+
+raspberry_pi_plus:
+  hide_if_away: false
+  icon:
+  mac:
+  name: raspberry pi plus
+  picture:
+  track: true
+
+raspberry_pi_plus_wi:
+  hide_if_away: false
+  icon:
+  mac:
+  name: raspberry pi plus wi
+  picture:
+  track: true
+
+mi5_cx:
+  hide_if_away: false
+  icon:
+  mac:
+  name: Mi5 cx
+  picture:
+  track: true
