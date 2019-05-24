@@ -15,18 +15,18 @@ homeassistant:
     binary_sensor:  { hidden: true, show_last_changed: true }
     person:         { show_last_changed: true }
   customize_glob:
-    "binary_sensor.*":  { show_last_changed: true }
-    "device_tracker.*": { show_last_changed: true }
-    "sensor.weather_*": { hidden: true }
-    "switch.power_strip_countdown_*": { hidden: true }
+    "device_tracker.*":   { show_last_changed: true }
+    "sensor.weather_*":   { hidden: true }
+    "binary_sensor.*":    { show_last_changed: true }
     "binary_sensor.mi_*": { hidden: true }
+    "switch.power_strip_countdown_*": { hidden: true }
     "scene.pechkata_sync_led_*": { hidden: true }
     "*.*_hidden": { hidden: true }
 
 default_config:
 
 http:
-  base_url: 192.168.0.240:8123
+  base_url: cxhass.duckdns.org:8123
 
 logger:
   default: info
@@ -145,8 +145,7 @@ tuya:
   
 xiaomi_aqara:
   discovery_retry: 3
-  gateways:
-    - key: kgvblgcptzvwn62v
+  gateways: { key: kgvblgcptzvwn62v }
 
 yeelight:
     devices:
@@ -248,13 +247,11 @@ switch:
         turn_on:
           - service: input_number.set_value
             entity_id: input_number.heat_duration
-            data:
-              value: 30
+            data: { value: 30 }
         turn_off:
           - service: input_number.set_value
             entity_id: input_number.heat_duration
-            data:
-              value: 0
+            data: { value: 0 }
         icon_template: "{% if ( states.input_number.heat_duration.state | int ) %}mdi:radiator{% else %}mdi:radiator-disabled{% endif %}"
 
 # # # # # # # #
@@ -284,9 +281,7 @@ sensor:
   - platform: dht
     sensor: DHT22
     pin: 19
-    monitored_conditions:
-      - temperature
-      - humidity
+    monitored_conditions: ['temperature','humidity']
   - platform: command_line
     name: CPU Temperature
     command: "cat /sys/class/thermal/thermal_zone0/temp"
