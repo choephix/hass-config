@@ -1,7 +1,14 @@
+mi5_cx:
+  hide_if_away: false
+  icon: mdi:cellphone-android
+  mac:
+  name: Xiaomi Mi5 Phone
+  picture:
+  track: true
 
 orange_pi_3:
   hide_if_away: false
-  icon:
+  icon: mdi:raspberry-pi
   mac:
   name: orange pi 3
   picture:
@@ -9,7 +16,7 @@ orange_pi_3:
 
 raspberry_pi_plus:
   hide_if_away: false
-  icon:
+  icon: mdi:raspberry-pi
   mac:
   name: raspberry pi plus
   picture:
@@ -17,23 +24,15 @@ raspberry_pi_plus:
 
 raspberry_pi_plus_wi:
   hide_if_away: false
-  icon:
+  icon: mdi:raspberry-pi
   mac:
   name: raspberry pi plus wi
   picture:
   track: true
 
-mi5_cx:
-  hide_if_away: false
-  icon:
-  mac:
-  name: Mi5 cx
-  picture:
-  track: true
-
 orange_pi_zero_plus:
   hide_if_away: false
-  icon:
+  icon: mdi:raspberry-pi
   mac:
   name: orange pi zero plus
   picture:
@@ -41,7 +40,7 @@ orange_pi_zero_plus:
 
 orange_pi_zero_plus_wi:
   hide_if_away: false
-  icon:
+  icon: mdi:raspberry-pi
   mac:
   name: orange pi zero plus wi
   picture:
@@ -49,7 +48,7 @@ orange_pi_zero_plus_wi:
 
 orange_pi_pc:
   hide_if_away: false
-  icon:
+  icon: mdi:raspberry-pi
   mac:
   name: orange pi pc
   picture:
@@ -57,7 +56,7 @@ orange_pi_pc:
 
 orange_pi_pc_wi:
   hide_if_away: false
-  icon:
+  icon: mdi:raspberry-pi
   mac:
   name: orange pi pc wi
   picture:

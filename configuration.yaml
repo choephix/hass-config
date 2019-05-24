@@ -40,7 +40,13 @@ discovery:
 
 recorder:
   include:
-    domains: sensor, switch, light, device_tracker, person, sun
+    domains: 
+      - sensor
+      - switch
+      - light
+      - device_tracker
+      - person
+      - sun
     entities: 
       - binary_sensor.boiler_heating
       - binary_sensor.pir_hall
