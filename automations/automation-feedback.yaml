@@ -1,0 +1,159 @@
+# # # # PECHKATA TIMER # # # #
+
+- alias: Feedback - Turn ON pechkata
+  trigger:
+    - platform: numeric_state
+      entity_id: input_number.heat_duration
+      above: 0
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 5, ringtone_id: 10013 }
+
+- alias: Feedback - Turn OFF pechkata
+  trigger:
+    - platform: numeric_state
+      entity_id: input_number.heat_duration
+      below: 1
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 60, ringtone_id: 10006 }
+      
+# # # # TEST # # # #
+
+- alias: Feedback -Boss Button BIG
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bb_button_1
+      to: "on"
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 3, ringtone_id: 10026 }
+    
+- alias: Feedback -Boss Buttons
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.bb_button_2
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.bb_button_3
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.bb_button_4
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.bb_button_5
+      to: "on"
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 3, ringtone_id: 10017 }
+      
+# # # # RINGTONES # # # #
+
+- alias: Feedback -Notify When Hassio Sarts
+  trigger:
+    - platform: homeassistant
+      event: start
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: {ringtone_vol: 50, ringtone_id: 10016 }
+    - service: switch.turn_on
+      entity_id: switch.hass_led
+    
+- alias: Feedback -Notify When Hassio Starts
+  trigger:
+    - platform: homeassistant
+      event: shutdown
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: {ringtone_vol: 50, ringtone_id: 10015 }
+    - service: switch.turn_off
+      entity_id: switch.hass_led
+      
+# # # # MOTION # # # #
+
+- alias: Feedback - PIR Activated
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.pir_hall
+      to: "on"
+    - platform: state
+      entity_id: binary_sensor.pir_kitchen
+      to: "on"
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 5, ringtone_id: 10020 }
+
+# # # # INPUTTA # # # #
+
+- alias: Feedback - Button BIDABED (single) -- Good Night
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data: { entity_id: binary_sensor.mi_button_bidabed, click_type: single }
+  condition:
+    condition: state
+    entity_id: light.hq_lights
+    state: 'on'
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 25, ringtone_id: 10011 }
+    
+- alias: Button BIDABED (single) -- Good Morning
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data: { entity_id: binary_sensor.mi_button_bidabed, click_type: single }
+  condition:
+    condition: state
+    entity_id: light.hq_lights
+    state: 'off'
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 25, ringtone_id: 10022 }
+      
+- alias: Button BIDABED (double) -- Dim dem lites
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data: { entity_id: binary_sensor.mi_button_bidabed, click_type: double }
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 15, ringtone_id: 10010 }
+
+- alias: Button BIDADOR (single)
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data: { entity_id: binary_sensor.mi_button_bidador, click_type: single }
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 10, ringtone_id: 10019 }
+    
+- alias: Button BIDADOR (double)
+  trigger:
+    - platform: event
+      event_type: xiaomi_aqara.click
+      event_data: { entity_id: binary_sensor.mi_button_bidador, click_type: double }
+  action:
+    - service: xiaomi_aqara.play_ringtone
+      data: { ringtone_vol: 1, ringtone_id: 10029 }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
