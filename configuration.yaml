@@ -7,12 +7,10 @@ homeassistant:
   time_zone: Europe/Sofia
   customize: !include customize.yaml
   customize_domain:
-    automation:
-      hidden: true
-    input_boolean: 
-      hidden: true
-    input_number: 
-      hidden: true
+    automation:    { hidden: true }
+    input_boolean: { hidden: true }
+    input_number:  { hidden: true }
+    scene:         { hidden: true }
   customize_glob:
     "sensor.weather_*": { hidden: true }
     "switch.power_strip_countdown_*": { hidden: true }
@@ -65,6 +63,7 @@ device_tracker:
     count: 2
     hosts:
       orange_pi_pc:           192.168.0.210
+      orange_pi_pc_wi:        192.168.0.211
       orange_pi_3:            192.168.0.230
       orange_pi_3_wi:         192.168.0.231
       raspberry_pi_plus:      192.168.0.240
@@ -276,26 +275,29 @@ sensor:
         value_template: "{{ states.input_number.heat_duration.state | int | timestamp_custom('%H:%M:%S', 0) }}"
         icon_template: mdi:timer
       mi5_battery:
-        value_template: '{{ states.device_tracker.mi5_cx.attributes.battery }}'  
+        value_template: '{{ states.device_tracker.mi5_cx.attributes.battery }}'
         friendly_name: 'Phone Battery' 
-        unit_of_measurement: '%'
+        unit_of_measurement: '%⚡'
       plug_xiaomi_1_power_current:
-        value_template: '{{ states.switch.plug_xiaomi_1.attributes.load_power|int }}'  
+        value_template: '{{ states.switch.plug_xiaomi_1.attributes.load_power|int }}'
         friendly_name: 'Бойлер Current Power' 
         unit_of_measurement: 'W'
       plug_xiaomi_1_power_consumed:
-        value_template: '{{ states.switch.plug_xiaomi_1.attributes.power_consumed|int }}'  
+        value_template: '{{ states.switch.plug_xiaomi_1.attributes.power_consumed|int }}'
         friendly_name: 'Бойлер Consumed Power' 
         unit_of_measurement: 'Wh'
       last_changed_pir_hall:
-        value_template: '{{ ( now() - states.binary_sensor.pir_hall.last_changed ) | int }}'  
-        friendly_name: 'Hall Last Motion' 
+        value_template: '{{ ( states.binary_sensor.pir_hall.last_changed | timestamp_custom("%H:%M:%S", 0) ) }}'
+        friendly_name: 'Hall Last Motion'
       last_changed_pir_kitchen:
-        value_template: '{{ now() - states.binary_sensor.pir_kitchen.last_changed }}'  
+        value_template: '{{ now() - states.binary_sensor.pir_kitchen.last_changed }}'
         friendly_name: 'Kitchen Last Motion'
+      last_changed_boiler:
+        value_template: '{{ (as_timestamp(now()) - as_timestamp(states.binary_sensor.boiler_heating.last_changed)) }}'
+        friendly_name: 'Boiler Last Active'
       sun_elevation:
-        value_template: '{{ states.sun.sun.attributes.elevation }}'  
-        friendly_name: 'Sun Elevation' 
+        value_template: '{{ states.sun.sun.attributes.elevation }}'
+        friendly_name: 'Sun Elevation'
         unit_of_measurement: '°'
 
 # # # # # # # #

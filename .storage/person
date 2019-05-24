@@ -2,7 +2,9 @@
     "data": {
         "persons": [
             {
-                "device_trackers": [],
+                "device_trackers": [
+                    "device_tracker.mi5_cx"
+                ],
                 "id": "99f1a91124fb4835b8813c58c81ea11f",
                 "name": "choephix",
                 "user_id": "c6d4efd94e1c45a18bc5d39999df7150"

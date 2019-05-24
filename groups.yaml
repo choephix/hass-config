@@ -1,0 +1,129 @@
+people:
+  name: HQ
+  icon: mdi:account-box-multiple
+  view: false
+  control: hidden
+  entities:
+  - person.choephix
+  - device_tracker.mi5_cx
+  - sensor.mi5_battery
+
+some_lights:
+  name: Various Lights
+  icon: mdi:bulb
+  view: false
+  entities:
+  - light.workdesk_headlamp
+  - light.hq_lights
+  - light.bulb_21
+  - light.plug_tuya2_led
+  - light.xiaomi_philips_candle
+  - light.wall_ewe61
+  - light.wall_ewe62
+
+hq_scenes:
+  name: HQ
+  icon: mdi:bulb
+  view: false
+  control: hidden
+  entities:
+  - script.lights_full
+  - script.lights_nice
+  - script.lights_dim
+  - script.lights_dimmer
+  - script.lights_off
+
+pechkata:
+  name: Печката
+  icon: mdi:radiator-disabled
+  view: false
+  control: hidden
+  entities:
+  - sensor.pechkata_timer
+  - switch.pechkata
+  - script.pechka_10min
+  - script.pechka_30min
+  - script.pechka_60min
+  - script.pechka_90min
+  - sensor.mi_temperature_01
+  - sensor.mi_humidity_01
+  - sensor.dht_sensor_temperature
+  - sensor.dht_sensor_humidity
+
+water_heating:
+  name: Water Heating
+  icon: mdi:thermometer-lines
+  view: false
+  control: hidden
+  entities:
+  - switch.plug_xiaomi_1
+  - binary_sensor.boiler_heating
+  - sensor.plug_xiaomi_1_power_current
+
+Switches:
+  icon: mdi:plug
+  view: false
+  control: hidden
+  entities:
+  - switch.power_strip_socket_1
+  - switch.power_strip_socket_2
+  - switch.power_strip_socket_3
+  - switch.power_strip_socket_4
+  - switch.power_strip_sockets_usb
+
+Indicators:
+  icon: mdi:bulb
+  view: false
+  control: hidden
+  entities:
+  - light.mi_gateway_light
+  - switch.hass_led
+
+dev_devices:
+  name: Machines
+  icon: mdi:chip
+  view: false
+  control: hidden
+  entities:
+  - sensor.cpu_temperature
+  - device_tracker.orange_pi_pc
+  #- device_tracker.orange_pi_pc_wi
+  - device_tracker.orange_pi_3 
+  #- device_tracker.orange_pi_3_wi
+  - device_tracker.raspberry_pi_plus
+  - device_tracker.raspberry_pi_plus_wi
+  - device_tracker.orange_pi_zero_plus 
+  - device_tracker.orange_pi_zero_plus_wi
+
+Crap+:
+  icon: mdi:etherium
+  view: false
+  control: hidden
+  entities:
+  - sensor.time
+  - sun.sun
+  - sensor.sun_elevation
+  - binary_sensor.pir_hall
+  - binary_sensor.pir_kitchen
+  - sensor.last_changed_boiler
+  - sensor.last_changed_pir_hall
+  - sensor.last_changed_pir_kitchen
+  - sensor.mi_illumination_01
+  - binary_sensor.bb_button_1
+  - binary_sensor.bb_button_2
+  - binary_sensor.bb_button_3
+  - binary_sensor.bb_button_4
+  - binary_sensor.bb_button_5
+  - sensor.plug_xiaomi_1_power_consumed
+  - group.all_automations
+  - automation.on_enter_second
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

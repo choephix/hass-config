@@ -2,8 +2,30 @@ light.hq_lights:
   icon: mdi:ceiling-light 
   unit_of_measurement: lmn
 
+sensor.mi5_battery:
+  icon: mdi:battery-50
+sensor.cpu_temperature:
+  icon: mdi:thermometer-alert
+sensor.sun_elevation:
+  icon: mdi:theme-light-dark
+sensor.plug_xiaomi_1_power_current:
+  icon: mdi:flash
+sensor.plug_xiaomi_1_power_consumed:
+  icon: mdi:flash-auto
+sensor.dht_sensor_humidity:
+  icon: mdi:water-percent
+  friendly_name: Kitchen Humidity
+sensor.dht_sensor_temperature:
+  friendly_name: Kitchen Temperature
+sensor.last_changed_boiler:
+  icon: mdi:timelapse
+sensor.last_changed_pir_hall:
+  icon: mdi:timelapse
+sensor.last_changed_pir_kitchen:
+  icon: mdi:timelapse
+
 switch.power_strip_sockets_usb: 
-  icon: mdi:play-network 
+  icon: mdi:usb
   friendly_name: Powerstrip Plugs USB 
 switch.power_strip_socket_1:    
   icon: mdi:power-socket 
@@ -23,6 +45,7 @@ switch.hass_led:
   icon: mdi:led-on 
 switch.plug_tuya_3:
   icon: mdi:power-plug
+  hidden: true
 
 device_tracker.mi5_cx: 
   icon: mdi:phone 
@@ -66,13 +89,13 @@ script.lights_off:
   icon: mdi:sleep 
 
 script.pechka_10min:  
-  icon: mdi:radiator 
+  icon: mdi:thermometer-plus 
 script.pechka_30min:  
-  icon: mdi:radiator 
+  icon: mdi:thermometer-plus 
 script.pechka_60min:  
-  icon: mdi:radiator 
+  icon: mdi:thermometer-plus 
 script.pechka_90min:  
-  icon: mdi:radiator 
+  icon: mdi:thermometer-plus 
  
 ####
   
@@ -94,11 +117,7 @@ light.xiaomi_philips_candle:
   friendly_name: "Hall Candle" 
   icon: mdi:candle 
 light.mi_gateway_light:
-  icon: mdi:circle-double
-
-
-timer.za_pechkata: 
-  device_class: sensor 
+  icon: mdi:mixer
 
 ####
 

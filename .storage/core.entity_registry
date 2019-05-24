@@ -123,7 +123,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.mi_temperature_01",
-                "name": null,
+                "name": "HQ Temperature",
                 "platform": "xiaomi_aqara",
                 "unique_id": "temperature158d00025564cf"
             },
@@ -132,7 +132,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.mi_humidity_01",
-                "name": null,
+                "name": "HQ Humidity",
                 "platform": "xiaomi_aqara",
                 "unique_id": "humidity158d00025564cf"
             },
@@ -141,7 +141,7 @@
                 "device_id": null,
                 "disabled_by": null,
                 "entity_id": "sensor.mi_illumination_01",
-                "name": null,
+                "name": "Mystrious Illumination",
                 "platform": "xiaomi_aqara",
                 "unique_id": "illumination7811dcb1f087"
             },
@@ -230,15 +230,6 @@
                 "config_entry_id": null,
                 "device_id": null,
                 "disabled_by": null,
-                "entity_id": "binary_sensor.aqara_cube",
-                "name": null,
-                "platform": "xiaomi_aqara",
-                "unique_id": "status158d000276e414"
-            },
-            {
-                "config_entry_id": null,
-                "device_id": null,
-                "disabled_by": null,
                 "entity_id": "binary_sensor.mi_button_bidabed",
                 "name": "Mi Button BIDABED",
                 "platform": "xiaomi_aqara",
@@ -252,6 +243,15 @@
                 "name": "Mi Button BIDADOR",
                 "platform": "xiaomi_aqara",
                 "unique_id": "status158d0001f35906"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "binary_sensor.mi_aqara_cube",
+                "name": null,
+                "platform": "xiaomi_aqara",
+                "unique_id": "status158d000276e414"
             }
         ]
     },

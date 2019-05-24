@@ -30,3 +30,27 @@ mi5_cx:
   name: Mi5 cx
   picture:
   track: true
+
+orange_pi_zero_plus:
+  hide_if_away: false
+  icon:
+  mac:
+  name: orange pi zero plus
+  picture:
+  track: true
+
+orange_pi_zero_plus_wi:
+  hide_if_away: false
+  icon:
+  mac:
+  name: orange pi zero plus wi
+  picture:
+  track: true
+
+orange_pi_pc:
+  hide_if_away: false
+  icon:
+  mac:
+  name: orange pi pc
+  picture:
+  track: true
