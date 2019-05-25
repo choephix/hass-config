@@ -5,7 +5,6 @@ homeassistant:
   elevation: 35
   unit_system: metric
   time_zone: Europe/Sofia
-  customize: !include customize.yaml
   customize_domain:
     automation:     { hidden: true }
     input_boolean:  { hidden: true }
@@ -15,13 +14,20 @@ homeassistant:
     binary_sensor:  { hidden: true, show_last_changed: true }
     person:         { show_last_changed: true }
   customize_glob:
-    "device_tracker.*":   { show_last_changed: true }
-    "sensor.weather_*":   { hidden: true }
-    "binary_sensor.*":    { show_last_changed: true }
-    "binary_sensor.mi_*": { hidden: true }
+    "sensor.weather_*":               { hidden: true }
+    "binary_sensor.mi_*":             { hidden: true }
+    "scene.pechkata_sync_led_*":      { hidden: true }
     "switch.power_strip_countdown_*": { hidden: true }
-    "scene.pechkata_sync_led_*": { hidden: true }
-    "*.*_hidden": { hidden: true }
+    "*.*_hidden":                     { hidden: true }
+    "script.lights_*":                { icon: 'mdi:lightbulb-on-outline' }
+    "script.pechka_*":                { icon: 'mdi:thermometer-plus'  }
+    "device_tracker.*_pi_*":          { icon: 'mdi:raspberry-pi' }
+    "device_tracker.phone_*":         { icon: 'mdi:cellphone-android' }
+    "sensor.last_changed_*":          { icon: 'mdi:clock-outline' }
+    "switch.power_strip_socket_*":    { icon: 'mdi:power-socket' }
+    "binary_sensor.*":                { show_last_changed: true }
+    "device_tracker.*":               { show_last_changed: true }
+  customize: !include customize.yaml
 
 default_config:
 
@@ -42,15 +48,12 @@ recorder:
   include:
     domains: 
       - sensor
+      - binary_sensor
       - switch
       - light
       - device_tracker
       - person
       - sun
-    entities: 
-      - binary_sensor.boiler_heating
-      - binary_sensor.pir_hall
-      - binary_sensor.pir_kitchen
   exclude:
     entities:
       - light.hq_lights
@@ -64,6 +67,14 @@ recorder:
       - sensor.last_changed_boiler
       - sensor.last_changed_pir_hall
       - sensor.last_changed_pir_kitchen
+      - binary_sensor.bb_button_1
+      - binary_sensor.bb_button_2
+      - binary_sensor.bb_button_3
+      - binary_sensor.bb_button_4
+      - binary_sensor.bb_button_5
+      - binary_sensor.mi_aqara_cube
+      - binary_sensor.mi_button_bidabed
+      - binary_sensor.mi_button_bidador
       
 history:
   exclude:
@@ -294,10 +305,6 @@ sensor:
       pechkata_timer:
         value_template: "{{ states.input_number.heat_duration.state | int | timestamp_custom('%H:%M:%S', 0) }}"
         icon_template: mdi:timer
-      mi5_battery:
-        value_template: '{{ states.device_tracker.mi5_cx.attributes.battery }}'
-        friendly_name: 'Phone Battery' 
-        unit_of_measurement: '%⚡'
       plug_xiaomi_1_power_current:
         value_template: '{{ states.switch.plug_xiaomi_1.attributes.load_power|int }}'
         friendly_name: 'Бойлер Current Power' 
@@ -319,6 +326,34 @@ sensor:
         value_template: '{{ states.sun.sun.attributes.elevation }}'
         friendly_name: 'Sun Elevation'
         unit_of_measurement: '°'
+      mi5_battery:
+        value_template: '{{ states.device_tracker.mi5_cx.attributes.battery }}'
+        friendly_name: 'Phone Battery' 
+        unit_of_measurement: '%⚡'
+        icon_template: >
+          {% if states.device_tracker.mi5_cx.attributes.battery %}
+            {% if states.device_tracker.mi5_cx.attributes.battery >= 98 %}
+              mdi:battery 
+            {% elif states.device_tracker.mi5_cx.attributes.battery >= 85 %}
+              mdi:battery-90 
+            {% elif states.device_tracker.mi5_cx.attributes.battery >= 75 %}
+              mdi:battery-80 
+            {% elif states.device_tracker.mi5_cx.attributes.battery >= 65 %}
+              mdi:battery-70 
+            {% elif states.device_tracker.mi5_cx.attributes.battery >= 50 %}
+              mdi:battery-50 
+            {% elif states.device_tracker.mi5_cx.attributes.battery >= 35 %}
+              mdi:battery-30 
+            {% elif states.device_tracker.mi5_cx.attributes.battery >= 25 %}
+              mdi:battery-20 
+            {% elif states.device_tracker.mi5_cx.attributes.battery <= 15 %}
+              mdi:battery-10 
+            {% else %}
+              mdi:battery-outline 
+            {% endif %}
+          {% else %}
+            mdi:battery-unknown 
+          {% endif %}
 
 # # # # # # # #
 # # # # # # # #

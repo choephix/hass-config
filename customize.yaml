@@ -8,8 +8,8 @@ light.hq_lights:
 
 sensor.pechkata_timer:
   show_last_changed: true
-sensor.mi5_battery:
-  icon: mdi:battery-50
+# sensor.mi5_battery:
+#   icon: mdi:battery-50
 sensor.cpu_temperature:
   icon: mdi:thermometer-alert
 sensor.sun_elevation:
@@ -24,28 +24,10 @@ sensor.dht_sensor_humidity:
   friendly_name: Kitchen Humidity
 sensor.dht_sensor_temperature:
   friendly_name: Kitchen Temperature
-sensor.last_changed_boiler:
-  icon: mdi:clock-outline
-sensor.last_changed_pir_hall:
-  icon: mdi:clock-outline
-sensor.last_changed_pir_kitchen:
-  icon: mdi:clock-outline
 
 switch.power_strip_sockets_usb: 
   icon: mdi:usb
   friendly_name: Powerstrip Plugs USB 
-switch.power_strip_socket_1:    
-  icon: mdi:power-socket 
-  friendly_name: Powerstrip Plug 1 
-switch.power_strip_socket_2:    
-  icon: mdi:power-socket 
-  friendly_name: Powerstrip Plug 2 
-switch.power_strip_socket_3:    
-  icon: mdi:power-socket 
-  friendly_name: Powerstrip Plug 3 
-switch.power_strip_socket_4:    
-  icon: mdi:power-socket 
-  friendly_name: Powerstrip Plug 4 
 switch.plug_xiaomi_01:          
   icon: mdi:battery 
 switch.hass_led:                
@@ -54,24 +36,8 @@ switch.plug_tuya_3:
   icon: mdi:power-plug
   hidden: true
 
-device_tracker.mi5_cx: 
-  icon: mdi:cellphone-android 
-device_tracker.orange_pi_pc: 
-  icon: mdi:raspberry-pi 
-device_tracker.orange_pi_pc_wi: 
-  icon: mdi:raspberry-pi 
-device_tracker.orange_pi_3: 
-  icon: mdi:raspberry-pi 
-device_tracker.orange_pi_3_wi: 
-  icon: mdi:raspberry-pi 
-device_tracker.raspberry_pi_plus: 
-  icon: mdi:raspberry-pi 
-device_tracker.raspberry_pi_plus_wi: 
-  icon: mdi:raspberry-pi 
-device_tracker.orange_pi_zero_plus: 
-  icon: mdi:raspberry-pi 
-device_tracker.orange_pi_zero_plus_wi: 
-  icon: mdi:raspberry-pi 
+device_tracker.mi5_cx:
+  icon: mdi:cellphone-android
 
 scene.pechkata_on:  
   icon: mdi:radiator 
@@ -86,26 +52,9 @@ scene.plug_tuya_2_off:
 scene.plug_tuya_2_on:     
   icon: mdi:car-light-high 
 
-script.lights_full:  
-  icon: mdi:lightbulb-on 
-script.lights_nice:  
-  icon: mdi:lightbulb-on 
-script.lights_dimmer:  
-  icon: mdi:lightbulb-on 
-script.lights_dim:  
-  icon: mdi:lightbulb-on 
 script.lights_off:  
   icon: mdi:sleep 
 
-script.pechka_10min:  
-  icon: mdi:thermometer-plus 
-script.pechka_30min:  
-  icon: mdi:thermometer-plus 
-script.pechka_60min:  
-  icon: mdi:thermometer-plus 
-script.pechka_90min:  
-  icon: mdi:thermometer-plus 
- 
 ####
   
 light.bulb_11: 
@@ -127,12 +76,3 @@ light.xiaomi_philips_candle:
   icon: mdi:candle 
 light.mi_gateway_light:
   icon: mdi:mixer
-
-####
-
-# scene.pechkata_sync_led_on:      hidden: true 
-# scene.pechkata_sync_led_off:     hidden: true 
-# input_boolean.pechkata:          hidden: true 
-# binary_sensor.mi_aqara_cube:     hidden: true 
-# binary_sensor.mi_button_bidabed: hidden: true 
-# binary_sensor.mi_button_bidador: hidden: true 
