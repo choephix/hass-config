@@ -16,60 +16,31 @@
 # # # # MOTION # # # #
 
 - alias: PIR Hall - ON
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.pir_hall
-      to: "on"
-  action:
-    #- service: light.turn_on
-    #  entity_id: light.wall_ewe61
-    - service: light.turn_on
-      entity_id: light.xiaomi_philips_candle
+  trigger: { platform: state, entity_id: binary_sensor.pir_hall, to: "on" }
+  action: # { service: light.turn_on, entity_id: light.wall_ewe61, light.xiaomi_philips_candle }
+    - { service: light.turn_on, entity_id: light.xiaomi_philips_candle }
     
 - alias: PIR Kitchen - ON
-  trigger:
-    - platform: state
-      entity_id: binary_sensor.pir_kitchen
-      to: "on"
-  condition:
-    - condition: template
-      value_template: '{{ states.sun.sun.attributes.elevation < 15 }}'
-  action:
-    - service: light.turn_on
-      entity_id: light.wall_ewe62
+  trigger:  platform: state, entity_id: binary_sensor.pir_kitchen, to: "on" }
+  condition: { condition: template, value_template: '{{ states.sun.sun.attributes.elevation < 15 }}' }
+  action: { service: light.turn_on, entity_id: light.wall_ewe62 }
     
 - alias: PIR Hall - OFF
   trigger: { platform: time_pattern, seconds: '/10' }
   condition: 
     - condition: and
       conditions:
-        - condition: state
-          entity_id: light.wall_ewe61
-          state: "on"
-          for: { minutes: 5 } # seconds minutes
-        - condition: state
-          entity_id: binary_sensor.pir_hall
-          state: "off"
-          for: { minutes: 5 } # seconds minutes
-  action:
-    - service: light.turn_off
-      entity_id: light.wall_ewe61
+        - { condition: state, entity_id: light.wall_ewe61, state: "on" for: { minutes: 5 } } # seconds minutes
+        - { condition: state, entity_id: binary_sensor.pir_hall, state: "off", for: { minutes: 5 } }
+  action: { service: light.turn_off, entity_id: light.wall_ewe61 }
 
 - alias: PIR Kitchen - OFF
   trigger: { platform: time_pattern, seconds: '/10' }
   condition: 
     - condition: and
       conditions:
-        - condition: state
-          entity_id: light.wall_ewe62
-          state: "on"
-          for: { minutes: 5 } # seconds minutes
-        - condition: state
-          entity_id: binary_sensor.pir_kitchen
-          state: "off"
-          for: { minutes: 5 } # seconds minutes
-  action:
-    - service: light.turn_off
-      entity_id: light.wall_ewe62
+        - { condition: state, entity_id: light.wall_ewe62, state: "on" for: { minutes: 5 } } # seconds minutes
+        - { condition: state, entity_id: binary_sensor.pir_kitchen, state: "off", for: { minutes: 5 } }
+  action: { service: light.turn_off, entity_id: light.wall_ewe62 }
 
 
