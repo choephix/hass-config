@@ -18,7 +18,7 @@
     - service: xiaomi_aqara.play_ringtone
       data: { ringtone_vol: 60, ringtone_id: 10006 }
       
-# # # # TEST # # # #
+# # # # BOSS BUTTONS # # # #
 
 - alias: Feedback -Boss Button BIG
   trigger:
@@ -49,39 +49,28 @@
       
 # # # # RINGTONES # # # #
 
-- alias: Feedback -Notify When Hassio Sarts
-  trigger:
-    - platform: homeassistant
-      event: start
+- alias: Feedback -Notify When Hassio Stats
+  trigger: { platform: homeassistant, event: start }
   action:
-    - service: xiaomi_aqara.play_ringtone
-      data: {ringtone_vol: 50, ringtone_id: 10016 }
-    - service: switch.turn_on
-      entity_id: switch.hass_led
+    - { service: xiaomi_aqara.play_ringtone, data: {ringtone_vol: 50, ringtone_id: 10016 } }
+    - { service: switch.turn_on, entity_id: switch.hass_led }
     
-- alias: Feedback -Notify When Hassio Starts
-  trigger:
-    - platform: homeassistant
-      event: shutdown
-  action:
-    - service: xiaomi_aqara.play_ringtone
-      data: {ringtone_vol: 50, ringtone_id: 10015 }
-    - service: switch.turn_off
-      entity_id: switch.hass_led
+- alias: Feedback -Notify When Hassio Shut Down
+  trigger: { platform: homeassistant, event: shutdown }
+  action: 
+    - { service: xiaomi_aqara.play_ringtone, data: {ringtone_vol: 50, ringtone_id: 10015 } }
+    #- { service: switch.turn_off, entity_id: switch.hass_led }
       
 # # # # MOTION # # # #
 
 - alias: Feedback - PIR Activated
   trigger:
     - platform: state
-      entity_id: binary_sensor.pir_hall
-      to: "on"
-    - platform: state
-      entity_id: binary_sensor.pir_kitchen
+      entity_id: binary_sensor.pir_hall, binary_sensor.pir_kitchen
       to: "on"
   action:
     - service: xiaomi_aqara.play_ringtone
-      data: { ringtone_vol: 5, ringtone_id: 10020 }
+      data: { ringtone_vol: 50, ringtone_id: 10020 }
 
 # # # # INPUTTA # # # #
 

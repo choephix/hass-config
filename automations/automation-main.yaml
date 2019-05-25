@@ -43,8 +43,8 @@
       entity_id: binary_sensor.pir_hall
       to: "on"
   action:
-    - service: light.turn_on
-      entity_id: light.wall_ewe61
+    #- service: light.turn_on
+    #  entity_id: light.wall_ewe61
     - service: light.turn_on
       entity_id: light.xiaomi_philips_candle
     
@@ -61,9 +61,7 @@
       entity_id: light.wall_ewe62
     
 - alias: PIR Hall - OFF
-  trigger:
-    - platform: time_pattern
-      seconds: '/10'
+  trigger: { platform: time_pattern, seconds: '/10' }
   condition: 
     - condition: and
       conditions:
@@ -80,9 +78,7 @@
       entity_id: light.wall_ewe61
 
 - alias: PIR Kitchen - OFF
-  trigger:
-    - platform: time_pattern
-      seconds: '/10'
+  trigger: { platform: time_pattern, seconds: '/10' }
   condition: 
     - condition: and
       conditions:
@@ -100,11 +96,7 @@
 
 # # # # INPUTTA # # # #
 
-- action: 
-    - entity_id: script.lights_off
-      service: script.turn_on
-    - service: rest_command.pc_sleep
-  alias: "Button BIDABED (single) -- Good Night"
+- alias: "Button BIDABED (single) -- Good Night"
   condition: 
     condition: state
     entity_id: light.hq_lights
@@ -115,11 +107,12 @@
         entity_id: binary_sensor.mi_button_bidabed
       event_type: xiaomi_aqara.click
       platform: event
-      
-- action: 
-    - entity_id: script.lights_full
+  action: 
+    - entity_id: script.lights_off
       service: script.turn_on
-  alias: "Button BIDABED (single) -- Good Morning"
+    # - service: rest_command.pc_sleep
+      
+- alias: "Button BIDABED (single) -- Good Morning"
   condition: 
     condition: state
     entity_id: light.hq_lights
@@ -130,51 +123,54 @@
         entity_id: binary_sensor.mi_button_bidabed
       event_type: xiaomi_aqara.click
       platform: event
-      
-- action: 
-    - entity_id: script.lights_dimmer
+  action: 
+    - entity_id: script.lights_full
       service: script.turn_on
-  alias: "Button BIDABED (double) -- Dim dem lites"
+     
+- alias: "Button BIDABED (double) -- Dim dem lites"
   trigger: 
     - event_data: { click_type: double, entity_id: binary_sensor.mi_button_bidabed }
       event_type: xiaomi_aqara.click
       platform: event
+  action: 
+    - entity_id: script.lights_dimmer
+      service: script.turn_on
       
-- action: 
-    - entity_id: switch.pechkata
-      service: switch.toggle
-  alias: "Button BIDABED (hold)"
+- alias: "Button BIDABED (hold)"
   trigger: 
     - event_data: { click_type: long_click_press, entity_id: binary_sensor.mi_button_bidabed }
       event_type: xiaomi_aqara.click
       platform: event
-
-- action: 
-    - entity_id: light.hq_lights
-      service: light.toggle
-  alias: "Button BIDADOR (single)"
+  action: 
+    - entity_id: switch.pechkata
+      service: switch.toggle
+  
+- alias: "Button BIDADOR (single)"
   trigger: 
     - event_data: { click_type: single, entity_id: binary_sensor.mi_button_bidador }
       event_type: xiaomi_aqara.click
       platform: event
+  action: 
+    - entity_id: light.hq_lights
+      service: light.toggle
       
-- action: 
-    - entity_id: light.wall_ewe61
-      service: light.turn_off
-    - entity_id: light.wall_ewe62
-      service: light.turn_off
-  alias: "Button BIDADOR (double)"
+- alias: "Button BIDADOR (double)"
   trigger: 
     - event_data: { click_type: double, entity_id: binary_sensor.mi_button_bidador }
       event_type: xiaomi_aqara.click
       platform: event
+  action: 
+    - entity_id: light.wall_ewe61
+      service: light.turn_off
+    - entity_id: light.wall_ewe62
+      service: light.turn_off
       
-- action: 
-    - entity_id: switch.pechkata
-      service: switch.toggle
-  alias: "Button BIDADOR (hold)"
+- alias: "Button BIDADOR (hold)"
   trigger: 
     - event_data: { click_type: long_click_press, entity_id: binary_sensor.mi_button_bidador }
       event_type: xiaomi_aqara.click
       platform: event
-
+  action: 
+    - entity_id: switch.pechkata
+      service: switch.toggle
+  
