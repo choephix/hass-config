@@ -25,7 +25,7 @@
   action: 
     - { service: xiaomi_aqara.play_ringtone, data: { ringtone_vol: 3, ringtone_id: 10017 } }
       
-# # # # RINGTONES # # # #
+# # # # HASSIO # # # #
 
 - alias: Feedback -Notify When Hassio Stats
   trigger: { platform: homeassistant, event: start }
@@ -43,7 +43,7 @@
 
 - alias: Feedback - PIR Activated
   trigger: { platform: state, entity_id: [binary_sensor.pir_hall,binary_sensor.pir_kitchen], to: "on" }
-  action: { service: xiaomi_aqara.play_ringtone, data: { ringtone_vol: 50, ringtone_id: 10020 } }
+  action: { service: xiaomi_aqara.play_ringtone, data: { ringtone_vol: 10, ringtone_id: 10020 } }
 
 # # # # INPUTTA # # # #
 
@@ -53,7 +53,7 @@
       event_type: xiaomi_aqara.click
       event_data: { entity_id: binary_sensor.mi_button_bidabed, click_type: single }
   condition: { condition: state, entity_id: light.hq_lights, state: 'on' }
-  action: { service: xiaomi_aqara.play_ringtone, data: { ringtone_vol: 40, ringtone_id: 10011 } }
+  action: { service: xiaomi_aqara.play_ringtone, data: { ringtone_vol: 40, ringtone_id: 10010 } }
     
 - alias: Feedback - Button BIDABED (single) -- Good Morning
   trigger:
@@ -68,7 +68,7 @@
     - platform: event
       event_type: xiaomi_aqara.click
       event_data: { entity_id: binary_sensor.mi_button_bidabed, click_type: double }
-  action: { service: xiaomi_aqara.play_ringtone, data: { ringtone_vol: 20, ringtone_id: 10010 } }
+  action: { service: xiaomi_aqara.play_ringtone, data: { ringtone_vol: 20, ringtone_id: 10011 } }
 
 
 - alias: Feedback - Button BIDADOR (single)

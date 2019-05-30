@@ -1,28 +1,27 @@
 person.choephix:
   icon: mdi:account-circle
-  show_last_changed: true
 
 light.hq_lights: 
   icon: mdi:ceiling-light 
-  unit_of_measurement: lmn
 
 sensor.pechkata_timer:
-  show_last_changed: true
-# sensor.mi5_battery:
-#   icon: mdi:battery-50
+  device_class: timestamp
+sensor.mi5_battery:
+  device_class: battery
 sensor.cpu_temperature:
   icon: mdi:thermometer-alert
 sensor.sun_elevation:
   icon: mdi:theme-light-dark
 sensor.plug_xiaomi_1_power_current:
-  icon: mdi:flash
+  device_class: power
 sensor.plug_xiaomi_1_power_consumed:
+  device_class: power
   icon: mdi:flash-auto
-  show_last_changed: true
 sensor.dht_sensor_humidity:
-  icon: mdi:water-percent
+  device_class: humidity
   friendly_name: Kitchen Humidity
 sensor.dht_sensor_temperature:
+  device_class: temperature
   friendly_name: Kitchen Temperature
 
 switch.power_strip_sockets_usb: 
@@ -54,6 +53,18 @@ scene.plug_tuya_2_on:
 
 script.lights_off:  
   icon: mdi:sleep 
+
+binary_sensor.bb_button_1: { device_class: problem }
+binary_sensor.bb_button_2: { device_class: problem }
+binary_sensor.bb_button_3: { device_class: problem }
+binary_sensor.bb_button_4: { device_class: problem }
+binary_sensor.bb_button_5: { device_class: problem }
+binary_sensor.mi_aqara_cube: { device_class: problem }
+binary_sensor.mi_button_bidabed: { device_class: problem }
+binary_sensor.mi_button_bidador: { device_class: problem }
+binary_sensor.boiler_heating: { device_class: power }
+binary_sensor.pir_hall: { device_class: motion }
+binary_sensor.pir_kitchen: { device_class: motion }
 
 ####
   

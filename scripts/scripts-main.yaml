@@ -1,5 +1,11 @@
 # # # #
 
+hass_restart:
+  alias: RESTART THE HASS
+  sequence: { service: homeassistant.restart }
+  
+# # # #
+
 pechka_10min:
   alias: Heat for 10 minutes
   sequence: { service: input_number.set_value, entity_id: input_number.heat_duration, data: { value: 600 } }

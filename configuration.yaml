@@ -10,24 +10,27 @@ homeassistant:
     input_boolean:  { hidden: true }
     input_number:   { hidden: true }
     scene:          { hidden: true }
-    device_tracker: { hidden: true, show_last_changed: true }
-    binary_sensor:  { hidden: true, show_last_changed: true }
+    device_tracker: { hidden: true }
+    binary_sensor:  { hidden: true }
     person:         { show_last_changed: true }
   customize_glob:
+    "binary_sensor.pir_*":            { device_class: "motion" }
     "sensor.weather_*":               { hidden: true }
-    "binary_sensor.mi_*":             { hidden: true }
+    "binary_sensor.mi_*":             { hidden: true, device_class: "problem" }
+    "binary_sensor.bb_button_*":      { hidden: true, device_class: "problem" }
     "scene.pechkata_sync_led_*":      { hidden: true }
     "switch.power_strip_countdown_*": { hidden: true }
     "*.*_hidden":                     { hidden: true }
     "script.lights_*":                { icon: 'mdi:lightbulb-on-outline' }
     "script.pechka_*":                { icon: 'mdi:thermometer-plus'  }
-    "device_tracker.*_pi_*":          { icon: 'mdi:raspberry-pi' }
+    "device_tracker.*_pi_*":          { icon: 'mdi:raspberry-pi', device_class: "connectivity" }
     "device_tracker.phone_*":         { icon: 'mdi:cellphone-android' }
     "sensor.last_changed_*":          { icon: 'mdi:clock-outline' }
     "switch.power_strip_socket_*":    { icon: 'mdi:power-socket' }
-    "binary_sensor.*":                { show_last_changed: true }
-    "device_tracker.*":               { show_last_changed: true }
   customize: !include customize.yaml
+
+frontend:
+  themes: !include themes.yaml
 
 default_config:
 
@@ -45,15 +48,17 @@ discovery:
     - yeelight
 
 recorder:
+  # db_url: sqlite:////config/mnt/home-assistant_v2.db
+  db_url: mysql://hass:dbdb1234@core-mariadb/homeassistant?charset=utf8
   include:
     domains: 
       - sensor
-      - binary_sensor
       - switch
       - light
       - device_tracker
       - person
       - sun
+      - binary_sensor
   exclude:
     entities:
       - light.hq_lights
@@ -72,32 +77,19 @@ recorder:
       - binary_sensor.bb_button_3
       - binary_sensor.bb_button_4
       - binary_sensor.bb_button_5
-      - binary_sensor.mi_aqara_cube
-      - binary_sensor.mi_button_bidabed
-      - binary_sensor.mi_button_bidador
-      
-history:
-  exclude:
-    domains:
-      - automation
-      - script
-      - group
-      - scene
-      - weblink
-    entities:
-      - sensor.time
-      - sensor.pechkata_timer
-      - sensor.last_changed_boiler
-      - sensor.last_changed_pir_hall
-      - sensor.last_changed_pir_kitchen
-      - binary_sensor.bb_button_1
-      - binary_sensor.bb_button_2
-      - binary_sensor.bb_button_3
-      - binary_sensor.bb_button_4
-      - binary_sensor.bb_button_5
+      # - binary_sensor.mi_aqara_cube
+      # - binary_sensor.mi_button_bidabed
+      # - binary_sensor.mi_button_bidador
     
 system_health:
+
+# remote:
+#   - platform: xiaomi_miio
+#     host: 192.168.0.200
+#     token: f2f2214b038157d511cae9a2ab07ce00
+#     name: Mi Remote Remote
     
+
 # # # # # # # #
 
 device_tracker:
@@ -119,32 +111,35 @@ device_tracker:
       # - 192.168.0.177 #
 
 rest_command:
+  vhome_wall_switch:
+    url: "http://{{ip}}:8081/zeroconf/switch"
+    method: POST
+    headers: { "cache-control":"no-store" }
+    payload: '{"sequence":"force_on","deviceid":"x","selfApikey":"x","iv":"{{iv}}","encrypt":true,"data":"{{data}}"}'
+    verify_ssl: false
+    
   vhome61_on:
     url: http://192.168.0.61:8081/zeroconf/switch
     method: POST
-    headers:
-        cache-control: "no-store"
+    headers: { "cache-control":"no-store" }
     payload: '{"sequence":"force_on","deviceid":"x","selfApikey":"x","iv":"NjU3ODU4ODY3MjQyNzUwMw==","encrypt":true,"data":"AWza9cwpLRwcSFQeSl5e2A=="}'
     verify_ssl: false
   vhome61_off:
     url: http://192.168.0.61:8081/zeroconf/switch
     method: POST
-    headers:
-        cache-control: "no-store"
+    headers: { "cache-control":"no-store" }
     payload: '{"sequence":"force_off","deviceid":"x","selfApikey":"x","iv":"OTMxMTQzMDI4ODE4MTIxNQ==","encrypt":true,"data":"IR3WzqNIJGkwOvzhbK+q3N20sVLSXZP9vS2jnESf53Q="}'
     verify_ssl: false
   vhome62_on:
     url: http://192.168.0.62:8081/zeroconf/switch
     method: POST
-    headers:
-        cache-control: "no-store"
+    headers: { "cache-control":"no-store" }
     payload: '{"sequence":"force_on","deviceid":"x","selfApikey":"x","iv":"Mzc0Njk3MjMwNTcyODgwMA==","encrypt":true,"data":"2eevsJm9I8wdM3u9Ll4E5Q=="}'
     verify_ssl: false
   vhome62_off:
     url: http://192.168.0.62:8081/zeroconf/switch
     method: POST
-    headers:
-        cache-control: "no-store"
+    headers: { "cache-control":"no-store" }
     payload: '{"sequence":"force_off","deviceid":"x","selfApikey":"x","iv":"Nzk2MzA5NjcxMjY0MzExOA==","encrypt":true,"data":"jDYyFpgkyl1bd64xT/pJqqYDeeoYrYG9L6v2DIDedrw="}'
     verify_ssl: false
 
@@ -155,8 +150,8 @@ tuya:
   platform: smart_life
   
 xiaomi_aqara:
-  discovery_retry: 3
-  gateways: { key: kgvblgcptzvwn62v }
+  discovery_retry: 30
+  gateways: { key: "kgvblgcptzvwn62v" }
 
 yeelight:
     devices:
@@ -308,10 +303,12 @@ sensor:
       plug_xiaomi_1_power_current:
         value_template: '{{ states.switch.plug_xiaomi_1.attributes.load_power|int }}'
         friendly_name: 'Бойлер Current Power' 
+        icon_template: mdi:flash
         unit_of_measurement: 'W'
       plug_xiaomi_1_power_consumed:
         value_template: '{{ states.switch.plug_xiaomi_1.attributes.power_consumed|int }}'
         friendly_name: 'Бойлер Consumed Power' 
+        icon_template: mdi:flash
         unit_of_measurement: 'Wh'
       last_changed_pir_hall:
         value_template: '{{ relative_time(states.binary_sensor.pir_hall.last_updated) }}{{ states.sensor.time.state[0:0] }}'
@@ -330,30 +327,30 @@ sensor:
         value_template: '{{ states.device_tracker.mi5_cx.attributes.battery }}'
         friendly_name: 'Phone Battery' 
         unit_of_measurement: '%⚡'
-        icon_template: >
-          {% if states.device_tracker.mi5_cx.attributes.battery %}
-            {% if states.device_tracker.mi5_cx.attributes.battery >= 98 %}
-              mdi:battery 
-            {% elif states.device_tracker.mi5_cx.attributes.battery >= 85 %}
-              mdi:battery-90 
-            {% elif states.device_tracker.mi5_cx.attributes.battery >= 75 %}
-              mdi:battery-80 
-            {% elif states.device_tracker.mi5_cx.attributes.battery >= 65 %}
-              mdi:battery-70 
-            {% elif states.device_tracker.mi5_cx.attributes.battery >= 50 %}
-              mdi:battery-50 
-            {% elif states.device_tracker.mi5_cx.attributes.battery >= 35 %}
-              mdi:battery-30 
-            {% elif states.device_tracker.mi5_cx.attributes.battery >= 25 %}
-              mdi:battery-20 
-            {% elif states.device_tracker.mi5_cx.attributes.battery <= 15 %}
-              mdi:battery-10 
-            {% else %}
-              mdi:battery-outline 
-            {% endif %}
-          {% else %}
-            mdi:battery-unknown 
-          {% endif %}
+        # icon_template: >
+        #   {% if states.device_tracker.mi5_cx.attributes.battery %}
+        #     {% if states.device_tracker.mi5_cx.attributes.battery >= 98 %}
+        #       mdi:battery 
+        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 85 %}
+        #       mdi:battery-90 
+        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 75 %}
+        #       mdi:battery-80 
+        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 65 %}
+        #       mdi:battery-70 
+        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 50 %}
+        #       mdi:battery-50 
+        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 35 %}
+        #       mdi:battery-30 
+        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 25 %}
+        #       mdi:battery-20 
+        #     {% elif states.device_tracker.mi5_cx.attributes.battery <= 15 %}
+        #       mdi:battery-10 
+        #     {% else %}
+        #       mdi:battery-outline 
+        #     {% endif %}
+        #   {% else %}
+        #     mdi:battery-unknown 
+        #   {% endif %}
 
 # # # # # # # #
 # # # # # # # #
