@@ -1,8 +1,7 @@
-person.choephix:
-  icon: mdi:account-circle
+person.choephix: { icon: "mdi:account-circle" }
 
-light.hq_lights: 
-  icon: mdi:ceiling-light 
+light.hq_lights: { icon: "mdi:ceiling-light" }
+light.hall_lights: { icon: "mdi:light-switch" }
 
 # sensor.pechkata_timer:
 #   device_class: timestamp
@@ -78,8 +77,6 @@ light.bulb_21:
   friendly_name: HQ Decor Bulb 
 light.wall_ewe62: 
   friendly_name: Kitchen Lights 
-light.wall_ewe61: 
-  friendly_name: Hall Lights 
 light.workdesk_headlamp: 
   icon: mdi:spotlight-beam 
 light.xiaomi_philips_candle: 

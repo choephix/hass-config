@@ -1,41 +1,33 @@
 {
     "data": [
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
-                    "hidden": true
+                    "editable": true,
+                    "friendly_name": "choephix",
+                    "gps_accuracy": 15,
+                    "icon": "mdi:account-circle",
+                    "id": "99f1a91124fb4835b8813c58c81ea11f",
+                    "latitude": 43.2081992,
+                    "longitude": 27.920248,
+                    "show_last_changed": true,
+                    "source": "person.choephix",
+                    "user_id": "c6d4efd94e1c45a18bc5d39999df7150"
                 },
                 "context": {
-                    "id": "c356d52f07734736841b070080480de8",
+                    "id": "8fc4d0d5af324f679ba3fe0b2b741409",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "input_boolean.power_ewe62",
-                "last_changed": "2019-06-06T00:13:00.307078+00:00",
-                "last_updated": "2019-06-06T00:13:00.307078+00:00",
-                "state": "off"
+                "entity_id": "person.choephix",
+                "last_changed": "2019-06-06T02:55:12.589423+00:00",
+                "last_updated": "2019-06-06T02:55:12.589423+00:00",
+                "state": "home"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "hidden": true
-                },
-                "context": {
-                    "id": "5ea7043c133d4b4298dd0bf2db892b99",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "input_boolean.power_ewe61",
-                "last_changed": "2019-06-04T20:48:18.497200+00:00",
-                "last_updated": "2019-06-04T20:48:18.497200+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
                     "hidden": true,
@@ -48,44 +40,736 @@
                     "unit_of_measurement": "sec"
                 },
                 "context": {
-                    "id": "b1a2b2b701c04151a40e25a416cdd434",
+                    "id": "bad78df8a04a44c58b48cb0bcd699b87",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "input_number.heat_duration",
-                "last_changed": "2019-06-01T13:25:43.198595+00:00",
-                "last_updated": "2019-06-01T13:25:43.198595+00:00",
+                "last_changed": "2019-06-06T02:55:12.665761+00:00",
+                "last_updated": "2019-06-06T02:55:12.665761+00:00",
                 "state": "0.0"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
-                    "editable": true,
-                    "friendly_name": "choephix",
-                    "gps_accuracy": 15,
-                    "icon": "mdi:account-circle",
-                    "id": "99f1a91124fb4835b8813c58c81ea11f",
-                    "latitude": 43.2081992,
-                    "longitude": 27.920248,
-                    "show_last_changed": true,
-                    "source": "device_tracker.mi5_cx",
-                    "user_id": "c6d4efd94e1c45a18bc5d39999df7150"
+                    "hidden": true
                 },
                 "context": {
-                    "id": "4903a40d3f61466aa8017892807cf3a1",
+                    "id": "a2fd82e4aa264ac38749d00ca127b7ef",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "person.choephix",
-                "last_changed": "2019-06-03T17:53:21.157438+00:00",
-                "last_updated": "2019-06-04T22:41:10.752867+00:00",
-                "state": "home"
+                "entity_id": "input_boolean.power_ewe62",
+                "last_changed": "2019-06-06T02:55:12.667678+00:00",
+                "last_updated": "2019-06-06T02:55:12.667678+00:00",
+                "state": "off"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "hidden": true
+                },
+                "context": {
+                    "id": "62c2310a3877418ca03d335c439e3eed",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "input_boolean.power_ewe61",
+                "last_changed": "2019-06-06T02:55:12.669107+00:00",
+                "last_updated": "2019-06-06T02:55:12.669107+00:00",
+                "state": "on"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "PIR Hall - ON",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:43:43.684853+00:00"
+                },
+                "context": {
+                    "id": "bb2d762cad464438bd7443b3c8860044",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.pir_hall_on",
+                "last_changed": "2019-06-06T02:55:14.412254+00:00",
+                "last_updated": "2019-06-06T02:55:14.412254+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback -Notify When Hassio Starts",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:49:01.821072+00:00"
+                },
+                "context": {
+                    "id": "845e920e704a4ceaafd0416094420144",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_notify_when_hassio_starts",
+                "last_changed": "2019-06-06T02:55:14.414611+00:00",
+                "last_updated": "2019-06-06T02:55:14.414611+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "PIR Hall - OFF",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:08:10.159148+00:00"
+                },
+                "context": {
+                    "id": "b951d837ac02420a8f9443f27cfdc69c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.pir_hall_off",
+                "last_changed": "2019-06-06T02:55:14.419242+00:00",
+                "last_updated": "2019-06-06T02:55:14.419242+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback -Notify When Hassio Shuts Down",
+                    "hidden": true,
+                    "last_triggered": null
+                },
+                "context": {
+                    "id": "d3d555d64149418abde760103f196c0f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_notify_when_hassio_shuts_down",
+                "last_changed": "2019-06-06T02:55:14.420907+00:00",
+                "last_updated": "2019-06-06T02:55:14.420907+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "PIR Kitchen - ON",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:43:37.324102+00:00"
+                },
+                "context": {
+                    "id": "92e9eab09ff841bab34a9197c7fda77a",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.pir_kitchen_on",
+                "last_changed": "2019-06-06T02:55:14.422426+00:00",
+                "last_updated": "2019-06-06T02:55:14.422426+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - PIR Activated",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:43:43.529225+00:00"
+                },
+                "context": {
+                    "id": "a3bf0cb08eba42a48ac6f552cf9fcd2e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_pir_activated",
+                "last_changed": "2019-06-06T02:55:14.424067+00:00",
+                "last_updated": "2019-06-06T02:55:14.424067+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "PIR Kitchen - OFF",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:17:50.158747+00:00"
+                },
+                "context": {
+                    "id": "afa4bf4e035a4d598a0bceaf780b01ab",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.pir_kitchen_off",
+                "last_changed": "2019-06-06T02:55:14.425651+00:00",
+                "last_updated": "2019-06-06T02:55:14.425651+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Button BIDABED (single) -- Good Night",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T11:10:33.848482+00:00"
+                },
+                "context": {
+                    "id": "1f114bd538354783afb657548a19a9c1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_button_bidabed_single_good_night",
+                "last_changed": "2019-06-06T02:55:14.427310+00:00",
+                "last_updated": "2019-06-06T02:55:14.427310+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Button BIDABED (single) -- Good Morning",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T11:06:30.560042+00:00"
+                },
+                "context": {
+                    "id": "ddd173f736534cee94cd7cd4e48a7c79",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_button_bidabed_single_good_morning",
+                "last_changed": "2019-06-06T02:55:14.429200+00:00",
+                "last_updated": "2019-06-06T02:55:14.429200+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Button BIDABED (double) -- Dim dem lites",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T01:27:27.470032+00:00"
+                },
+                "context": {
+                    "id": "317627f0eaf14cb5b3b8da6b28f1cffa",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_button_bidabed_double_dim_dem_lites",
+                "last_changed": "2019-06-06T02:55:14.430866+00:00",
+                "last_updated": "2019-06-06T02:55:14.430866+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Button BIDADOR (single)",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:44:09.586936+00:00"
+                },
+                "context": {
+                    "id": "66d7ab515cb1430fa14713d9af0150ba",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_button_bidador_single",
+                "last_changed": "2019-06-06T02:55:14.432782+00:00",
+                "last_updated": "2019-06-06T02:55:14.432782+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Button BIDADOR (single)",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:44:10.755161+00:00"
+                },
+                "context": {
+                    "id": "3270b74307d7448eb3359761449d1b91",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_button_bidador_single_2",
+                "last_changed": "2019-06-06T02:55:14.434597+00:00",
+                "last_updated": "2019-06-06T02:55:14.434597+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Button BIDADOR (double)",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:44:02.061867+00:00"
+                },
+                "context": {
+                    "id": "eeb524bf084f478e856f1165ddec5c70",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_button_bidador_double",
+                "last_changed": "2019-06-06T02:55:14.436291+00:00",
+                "last_updated": "2019-06-06T02:55:14.436291+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Dev Console Button 1",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T18:18:38.117935+00:00"
+                },
+                "context": {
+                    "id": "44bb30e241ac47f5a4ce2496436f6c72",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.dev_console_button_1",
+                "last_changed": "2019-06-06T02:55:14.437886+00:00",
+                "last_updated": "2019-06-06T02:55:14.437886+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Dev Console Button 2",
+                    "hidden": true,
+                    "last_triggered": "2019-06-02T22:20:42.774401+00:00"
+                },
+                "context": {
+                    "id": "4d306f1d80744834b72a5cd9f874e607",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.dev_console_button_2",
+                "last_changed": "2019-06-06T02:55:14.439542+00:00",
+                "last_updated": "2019-06-06T02:55:14.439542+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Dev Console Button 3",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T11:32:03.344414+00:00"
+                },
+                "context": {
+                    "id": "d185b45f44844670aa30bf3ecc87bfc6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.dev_console_button_3",
+                "last_changed": "2019-06-06T02:55:14.441163+00:00",
+                "last_updated": "2019-06-06T02:55:14.441163+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Dev Console Button 4",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:42:44.980320+00:00"
+                },
+                "context": {
+                    "id": "663f10d7c7994923aafde44a89742cfd",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.dev_console_button_4",
+                "last_changed": "2019-06-06T02:55:14.442760+00:00",
+                "last_updated": "2019-06-06T02:55:14.442760+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Dev Console Button 5",
+                    "hidden": true,
+                    "last_triggered": "2019-06-02T22:20:31.248177+00:00"
+                },
+                "context": {
+                    "id": "5deaa996f68b4050912382fcebc60195",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.dev_console_button_5",
+                "last_changed": "2019-06-06T02:55:14.444416+00:00",
+                "last_updated": "2019-06-06T02:55:14.444416+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDABED (single) -- Good Night",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T11:10:33.433033+00:00"
+                },
+                "context": {
+                    "id": "a9802f10f18a470296223f755ea52f75",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidabed_single_good_night",
+                "last_changed": "2019-06-06T02:55:14.446051+00:00",
+                "last_updated": "2019-06-06T02:55:14.446051+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDABED (single) -- Good Morning",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T11:06:30.160664+00:00"
+                },
+                "context": {
+                    "id": "490aa18f6cda4faa9fbb976981a5742e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidabed_single_good_morning",
+                "last_changed": "2019-06-06T02:55:14.447642+00:00",
+                "last_updated": "2019-06-06T02:55:14.447642+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDABED (double) -- Dim dem lites",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T01:27:27.430998+00:00"
+                },
+                "context": {
+                    "id": "375698e4b4b54081a87c5e292a89e9a1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidabed_double_dim_dem_lites",
+                "last_changed": "2019-06-06T02:55:14.449267+00:00",
+                "last_updated": "2019-06-06T02:55:14.449267+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDABED (double) -- Undim dem lites",
+                    "hidden": true,
+                    "last_triggered": "2019-05-25T12:40:00.881408+00:00"
+                },
+                "context": {
+                    "id": "e2f239f40a874e4fa494827d0343d8a2",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidabed_double_undim_dem_lites",
+                "last_changed": "2019-06-06T02:55:14.450894+00:00",
+                "last_updated": "2019-06-06T02:55:14.450894+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDABED (hold)",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T01:27:19.391107+00:00"
+                },
+                "context": {
+                    "id": "245280fe5282412fb88c00c27372f838",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidabed_hold",
+                "last_changed": "2019-06-06T02:55:14.453598+00:00",
+                "last_updated": "2019-06-06T02:55:14.453598+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDADOR (single) ON",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:44:09.570092+00:00"
+                },
+                "context": {
+                    "id": "85a429e9ecce4ba9b1667c7b33034253",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidador_single_on",
+                "last_changed": "2019-06-06T02:55:14.455406+00:00",
+                "last_updated": "2019-06-06T02:55:14.455406+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDADOR (single) OFF",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:44:10.770191+00:00"
+                },
+                "context": {
+                    "id": "2f56cc8583034f878b27275e857fce9a",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidador_single_off",
+                "last_changed": "2019-06-06T02:55:14.457044+00:00",
+                "last_updated": "2019-06-06T02:55:14.457044+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDADOR (double)",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:44:01.897105+00:00"
+                },
+                "context": {
+                    "id": "b92a52a1f4e148028569df62e9822ee2",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidador_double",
+                "last_changed": "2019-06-06T02:55:14.458603+00:00",
+                "last_updated": "2019-06-06T02:55:14.458603+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Button BIDADOR (hold)",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:44:18.256498+00:00"
+                },
+                "context": {
+                    "id": "4b97929ab5f14ef3bd9c40d168fc9939",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.button_bidador_hold",
+                "last_changed": "2019-06-06T02:55:14.460157+00:00",
+                "last_updated": "2019-06-06T02:55:14.460157+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Refresh Things When Hassio Stats",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:48:58.941115+00:00"
+                },
+                "context": {
+                    "id": "61dab7c85f35489696b638fee8e2204e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.refresh_things_when_hassio_stats",
+                "last_changed": "2019-06-06T02:55:14.461747+00:00",
+                "last_updated": "2019-06-06T02:55:14.461747+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Turn ON pechkata",
+                    "hidden": true,
+                    "last_triggered": "2019-06-01T02:38:15.360494+00:00"
+                },
+                "context": {
+                    "id": "1a31652facba4edabb55a4ac0c976eb6",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_turn_on_pechkata",
+                "last_changed": "2019-06-06T02:55:14.463442+00:00",
+                "last_updated": "2019-06-06T02:55:14.463442+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "On enter minute",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:54:00.444133+00:00"
+                },
+                "context": {
+                    "id": "6b7aec4e75c24be2861c7afc4c16ed84",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.on_enter_minute",
+                "last_changed": "2019-06-06T02:55:14.465178+00:00",
+                "last_updated": "2019-06-06T02:55:14.465178+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback - Turn OFF pechkata",
+                    "hidden": true,
+                    "last_triggered": "2019-06-01T02:38:18.296942+00:00"
+                },
+                "context": {
+                    "id": "fbebd1b404e94a1dab736d7b67fb4d8c",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_turn_off_pechkata",
+                "last_changed": "2019-06-06T02:55:14.466814+00:00",
+                "last_updated": "2019-06-06T02:55:14.466814+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "On enter second",
+                    "hidden": true,
+                    "last_triggered": "2019-06-01T02:38:17.079482+00:00"
+                },
+                "context": {
+                    "id": "1063c8a2ab2d4f6a8a6a2eeac71ffea8",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.on_enter_second",
+                "last_changed": "2019-06-06T02:55:14.468437+00:00",
+                "last_updated": "2019-06-06T02:55:14.468437+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback -Boss Button BIG",
+                    "hidden": true,
+                    "last_triggered": "2019-06-05T18:18:36.585285+00:00"
+                },
+                "context": {
+                    "id": "d0c1ca0c302b4d7b8cd760dab1113e0f",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_boss_button_big",
+                "last_changed": "2019-06-06T02:55:14.470025+00:00",
+                "last_updated": "2019-06-06T02:55:14.470025+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn ON pechkata",
+                    "hidden": true,
+                    "last_triggered": "2019-06-01T02:38:15.567600+00:00"
+                },
+                "context": {
+                    "id": "2ab30e4e6b624f25be1ad318e52a6e4e",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_on_pechkata",
+                "last_changed": "2019-06-06T02:55:14.471642+00:00",
+                "last_updated": "2019-06-06T02:55:14.471642+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Feedback -Boss Buttons",
+                    "hidden": true,
+                    "last_triggered": "2019-06-06T02:42:38.969956+00:00"
+                },
+                "context": {
+                    "id": "3bd9594bc76a4245acffed497a3b9ac0",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.feedback_boss_buttons",
+                "last_changed": "2019-06-06T02:55:14.473248+00:00",
+                "last_updated": "2019-06-06T02:55:14.473248+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "friendly_name": "Turn OFF pechkata",
+                    "hidden": true,
+                    "last_triggered": "2019-06-01T02:38:17.947639+00:00"
+                },
+                "context": {
+                    "id": "19cb2c5e2148449c8594c5edb0afccc1",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "automation.turn_off_pechkata",
+                "last_changed": "2019-06-06T02:55:14.474961+00:00",
+                "last_updated": "2019-06-06T02:55:14.474961+00:00",
+                "state": "off"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
                     "battery": 28,
@@ -98,18 +782,18 @@
                     "source_type": "gps"
                 },
                 "context": {
-                    "id": "eab6c3d2b86d4e619b7718d5ac34af9b",
+                    "id": "b3b6c9abc80642c5a49007171e591bbb",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "device_tracker.mi5_cx",
-                "last_changed": "2019-06-03T17:53:21.150839+00:00",
-                "last_updated": "2019-06-04T22:41:10.739554+00:00",
+                "last_changed": "2019-06-06T02:55:37.002744+00:00",
+                "last_updated": "2019-06-06T02:55:37.002744+00:00",
                 "state": "home"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
                     "device_class": "connectivity",
@@ -119,39 +803,102 @@
                     "source_type": null
                 },
                 "context": {
-                    "id": "e3fcddfe35ee4f86999a59fa2814ad53",
+                    "id": "bcd9159d98d74907b766038e1faa9625",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "device_tracker.orange_pi_3",
-                "last_changed": "2019-06-01T13:25:56.120328+00:00",
-                "last_updated": "2019-06-01T13:25:56.120328+00:00",
+                "last_changed": "2019-06-06T02:55:37.004399+00:00",
+                "last_updated": "2019-06-06T02:55:37.004399+00:00",
                 "state": "not_home"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
                     "device_class": "connectivity",
                     "friendly_name": "raspberry pi plus",
                     "hidden": true,
                     "icon": "mdi:raspberry-pi",
-                    "source_type": "router"
+                    "source_type": null
                 },
                 "context": {
-                    "id": "5c6b72abb0d94f6f99db60ee2e7ce570",
+                    "id": "94c7e923868f4a2b83f491644b5f75a3",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "device_tracker.raspberry_pi_plus",
-                "last_changed": "2019-06-05T22:49:11.519368+00:00",
-                "last_updated": "2019-06-05T22:49:11.519368+00:00",
-                "state": "home"
+                "last_changed": "2019-06-06T02:55:37.006046+00:00",
+                "last_updated": "2019-06-06T02:55:37.006046+00:00",
+                "state": "not_home"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "device_class": "connectivity",
+                    "friendly_name": "raspberry pi plus wi",
+                    "hidden": true,
+                    "icon": "mdi:raspberry-pi",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "e4133c3cc8db46e18722fd9ce5376389",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.raspberry_pi_plus_wi",
+                "last_changed": "2019-06-06T02:55:37.007604+00:00",
+                "last_updated": "2019-06-06T02:55:37.007604+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "device_class": "connectivity",
+                    "friendly_name": "orange pi zero plus",
+                    "hidden": true,
+                    "icon": "mdi:raspberry-pi",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "ac358fb5297544aa826f03ad5187d1ef",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.orange_pi_zero_plus",
+                "last_changed": "2019-06-06T02:55:37.009119+00:00",
+                "last_updated": "2019-06-06T02:55:37.009119+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
+            "state": {
+                "attributes": {
+                    "device_class": "connectivity",
+                    "friendly_name": "orange pi zero plus wi",
+                    "hidden": true,
+                    "icon": "mdi:raspberry-pi",
+                    "source_type": null
+                },
+                "context": {
+                    "id": "f1adb194b8da4a6d9e5062e1542486fa",
+                    "parent_id": null,
+                    "user_id": null
+                },
+                "entity_id": "device_tracker.orange_pi_zero_plus_wi",
+                "last_changed": "2019-06-06T02:55:37.010660+00:00",
+                "last_updated": "2019-06-06T02:55:37.010660+00:00",
+                "state": "not_home"
+            }
+        },
+        {
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
                     "device_class": "connectivity",
@@ -161,18 +908,18 @@
                     "source_type": "router"
                 },
                 "context": {
-                    "id": "b3ccd0f44739452d8f9175d39ddd6342",
+                    "id": "c691f90495104ade95f083343c97d0d0",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "device_tracker.orange_pi_pc",
-                "last_changed": "2019-06-01T13:25:56.123379+00:00",
-                "last_updated": "2019-06-01T13:25:56.123379+00:00",
+                "last_changed": "2019-06-06T02:55:37.012183+00:00",
+                "last_updated": "2019-06-06T02:55:37.012183+00:00",
                 "state": "not_home"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
                     "device_class": "connectivity",
@@ -182,94 +929,57 @@
                     "source_type": "router"
                 },
                 "context": {
-                    "id": "fbedd8cb1bbf44a6a8806330ec366412",
+                    "id": "aa9b2dd6e8c0493fb43bc328041b78c8",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "device_tracker.orange_pi_pc_wi",
-                "last_changed": "2019-06-01T13:25:56.125132+00:00",
-                "last_updated": "2019-06-01T13:25:56.125132+00:00",
+                "last_changed": "2019-06-06T02:55:37.013706+00:00",
+                "last_updated": "2019-06-06T02:55:37.013706+00:00",
                 "state": "not_home"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:55:51.922923+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Turn ON pechkata",
+                    "friendly_name": "phone mi5",
                     "hidden": true,
-                    "last_triggered": "2019-06-01T02:38:15.567600+00:00"
+                    "icon": "mdi:cellphone-android",
+                    "source_type": null
                 },
                 "context": {
-                    "id": "a41f8808e7c74eca95efee22bc2c84ef",
+                    "id": "ede502ce3765462e9b2e9173c4031b21",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "automation.turn_on_pechkata",
-                "last_changed": "2019-06-04T00:48:06.412980+00:00",
-                "last_updated": "2019-06-04T00:48:06.412980+00:00",
-                "state": "on"
+                "entity_id": "device_tracker.phone_mi5",
+                "last_changed": "2019-06-06T02:55:37.015511+00:00",
+                "last_updated": "2019-06-06T02:55:37.015511+00:00",
+                "state": "not_home"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:27:56.553414+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Button BIDABED (double) -- Undim dem lites",
+                    "friendly_name": "Feedback -Notify When Hassio Stats",
                     "hidden": true,
-                    "last_triggered": "2019-05-25T12:40:00.881408+00:00"
+                    "last_triggered": "2019-06-06T02:27:32.174442+00:00"
                 },
                 "context": {
-                    "id": "c24d29591d874ba8bc8c44851283ae88",
+                    "id": "fde613ae0cda458e87e3622be0d9c207",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "automation.button_bidabed_double_undim_dem_lites",
-                "last_changed": "2019-06-04T00:48:06.416498+00:00",
-                "last_updated": "2019-06-04T00:48:06.416498+00:00",
+                "entity_id": "automation.feedback_notify_when_hassio_stats",
+                "last_changed": "2019-06-06T02:27:31.913887+00:00",
+                "last_updated": "2019-06-06T02:27:32.175076+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Button BIDADOR (single) OFF",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T18:18:17.824008+00:00"
-                },
-                "context": {
-                    "id": "0a95bae69b1748c4a611b23c9e7080b8",
-                    "parent_id": "040fcc0db7a143e09eb5ff46dc0132d3",
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidador_single_off",
-                "last_changed": "2019-06-04T00:48:06.419769+00:00",
-                "last_updated": "2019-06-05T18:18:17.824647+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "PIR Kitchen - ON",
-                    "hidden": true,
-                    "last_triggered": "2019-06-06T00:02:51.222658+00:00"
-                },
-                "context": {
-                    "id": "00ca628fce2e4a2dac05e1eab2a126d5",
-                    "parent_id": "b287dfc46cf44f15b019f3c96d7737c9",
-                    "user_id": null
-                },
-                "entity_id": "automation.pir_kitchen_on",
-                "last_changed": "2019-06-04T00:48:06.422678+00:00",
-                "last_updated": "2019-06-06T00:02:51.223213+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:27:56.553414+00:00",
             "state": {
                 "attributes": {
                     "friendly_name": "Feedback -Notify When Hassio Shut Down",
@@ -277,584 +987,62 @@
                     "last_triggered": null
                 },
                 "context": {
-                    "id": "c98b2daab0024188bd59f47108802d47",
+                    "id": "6d7a3cc9e1cb474697aa9e4c88a4ca08",
                     "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_notify_when_hassio_shut_down",
-                "last_changed": "2019-06-04T00:48:06.425761+00:00",
-                "last_updated": "2019-06-04T00:48:06.425761+00:00",
+                "last_changed": "2019-06-06T02:27:31.920399+00:00",
+                "last_updated": "2019-06-06T02:27:31.920399+00:00",
                 "state": "on"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:22:11.466598+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "Button BIDABED (double) -- Dim dem lites",
                     "hidden": true,
-                    "last_triggered": "2019-06-05T01:27:27.430998+00:00"
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 30.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0,
+                    "unit_of_measurement": "minutes"
                 },
                 "context": {
-                    "id": "9d5910b460bd47ae93c4b9123d6f3372",
-                    "parent_id": "1f42c4a59cfa47929e431886efd39d57",
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidabed_double_dim_dem_lites",
-                "last_changed": "2019-06-04T00:48:06.429074+00:00",
-                "last_updated": "2019-06-05T01:27:27.432230+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Button BIDABED (double) -- Dim dem lites",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T01:27:27.470032+00:00"
-                },
-                "context": {
-                    "id": "16b854ab5ae948c1a2c673affa6b66cf",
-                    "parent_id": "1f42c4a59cfa47929e431886efd39d57",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_button_bidabed_double_dim_dem_lites",
-                "last_changed": "2019-06-04T00:48:06.432786+00:00",
-                "last_updated": "2019-06-05T01:27:27.471217+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Dev Console Button 5",
-                    "hidden": true,
-                    "last_triggered": "2019-06-02T22:20:31.248177+00:00"
-                },
-                "context": {
-                    "id": "a02aa9bfc04a490381797713ece3cf5b",
+                    "id": "336232c1aaeb41088d36fe504346936b",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "automation.dev_console_button_5",
-                "last_changed": "2019-06-04T00:48:06.435983+00:00",
-                "last_updated": "2019-06-04T00:48:06.435983+00:00",
-                "state": "on"
+                "entity_id": "input_number.motion_timeout_kitchen",
+                "last_changed": "2019-06-06T02:01:08.345686+00:00",
+                "last_updated": "2019-06-06T02:01:08.345686+00:00",
+                "state": "0.0"
             }
         },
         {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
+            "last_seen": "2019-06-06T02:22:11.466598+00:00",
             "state": {
                 "attributes": {
-                    "friendly_name": "PIR Hall - ON",
                     "hidden": true,
-                    "last_triggered": "2019-06-06T00:38:45.071487+00:00"
+                    "icon": "mdi:timer",
+                    "initial": null,
+                    "max": 30.0,
+                    "min": 0.0,
+                    "mode": "slider",
+                    "step": 1.0,
+                    "unit_of_measurement": "minutes"
                 },
                 "context": {
-                    "id": "f25e8dea00c644519b1b03f7f2092f74",
-                    "parent_id": "8f09112964c8493aacf28f25ed4b0721",
-                    "user_id": null
-                },
-                "entity_id": "automation.pir_hall_on",
-                "last_changed": "2019-06-04T00:48:06.440332+00:00",
-                "last_updated": "2019-06-06T00:38:45.072067+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Button BIDABED (single) -- Good Morning",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T11:06:30.560042+00:00"
-                },
-                "context": {
-                    "id": "fc826bcb13e149cd8ae620194a05fdf9",
-                    "parent_id": "d7704248999048628b8de166933e90cd",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_button_bidabed_single_good_morning",
-                "last_changed": "2019-06-04T00:48:06.443968+00:00",
-                "last_updated": "2019-06-05T11:06:30.560998+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Turn OFF pechkata",
-                    "hidden": true,
-                    "last_triggered": "2019-06-01T02:38:17.947639+00:00"
-                },
-                "context": {
-                    "id": "6117556fca1042459ff31fee90247d64",
+                    "id": "b20e504aba2b4324af9b5470a44039d6",
                     "parent_id": null,
                     "user_id": null
                 },
-                "entity_id": "automation.turn_off_pechkata",
-                "last_changed": "2019-06-04T00:48:06.447225+00:00",
-                "last_updated": "2019-06-04T00:48:06.447225+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "PIR Kitchen - OFF",
-                    "hidden": true,
-                    "last_triggered": "2019-06-06T00:13:00.317807+00:00"
-                },
-                "context": {
-                    "id": "c356d52f07734736841b070080480de8",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.pir_kitchen_off",
-                "last_changed": "2019-06-04T00:48:06.450556+00:00",
-                "last_updated": "2019-06-06T00:13:00.318376+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "On enter second",
-                    "hidden": true,
-                    "last_triggered": "2019-06-01T02:38:17.079482+00:00"
-                },
-                "context": {
-                    "id": "5123e7fa419849b69d27f7bd8abf5255",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.on_enter_second",
-                "last_changed": "2019-06-04T00:48:06.453346+00:00",
-                "last_updated": "2019-06-04T00:48:06.453346+00:00",
-                "state": "off"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Button BIDADOR (double)",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T21:58:18.592340+00:00"
-                },
-                "context": {
-                    "id": "27b824c72ba140d7af5dbad3ba5cee85",
-                    "parent_id": "6bf3f418696a415fbd770445f61156a7",
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidador_double",
-                "last_changed": "2019-06-04T00:48:06.456764+00:00",
-                "last_updated": "2019-06-05T21:58:18.593132+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Dev Console Button 1",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T18:18:38.117935+00:00"
-                },
-                "context": {
-                    "id": "b6b6c36f22984d489bb367db47833db3",
-                    "parent_id": "f4cc1e32cf4b4b0583017445ecde88e8",
-                    "user_id": null
-                },
-                "entity_id": "automation.dev_console_button_1",
-                "last_changed": "2019-06-04T00:48:06.464423+00:00",
-                "last_updated": "2019-06-05T18:18:38.118461+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Button BIDADOR (single)",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T18:18:18.097201+00:00"
-                },
-                "context": {
-                    "id": "a70b820f2e3240f2bdb453bc57050849",
-                    "parent_id": "040fcc0db7a143e09eb5ff46dc0132d3",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_button_bidador_single",
-                "last_changed": "2019-06-04T00:48:06.468072+00:00",
-                "last_updated": "2019-06-05T18:18:18.097729+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback -Boss Button BIG",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T18:18:36.585285+00:00"
-                },
-                "context": {
-                    "id": "1a738e98f695455bb232a18c9bbe447a",
-                    "parent_id": "f4cc1e32cf4b4b0583017445ecde88e8",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_boss_button_big",
-                "last_changed": "2019-06-04T00:48:06.473051+00:00",
-                "last_updated": "2019-06-05T18:18:36.585950+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Button BIDABED (single) -- Good Night",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T11:10:33.848482+00:00"
-                },
-                "context": {
-                    "id": "330cf37c5af34cada19e96b854affc45",
-                    "parent_id": "e9a58315bd214f3b9a0154d442ab5160",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_button_bidabed_single_good_night",
-                "last_changed": "2019-06-04T00:48:06.477850+00:00",
-                "last_updated": "2019-06-05T11:10:33.849107+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Button BIDADOR (hold)",
-                    "hidden": true,
-                    "last_triggered": null
-                },
-                "context": {
-                    "id": "131cfc0e1f284588961bef6f4f70f9ae",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidador_hold",
-                "last_changed": "2019-06-04T00:48:06.481567+00:00",
-                "last_updated": "2019-06-04T00:48:06.481567+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Dev Console Button 4",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T21:58:25.336213+00:00"
-                },
-                "context": {
-                    "id": "8ebebc8772804991a0d59149d4b89579",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.dev_console_button_4",
-                "last_changed": "2019-06-04T00:48:06.484880+00:00",
-                "last_updated": "2019-06-05T21:58:25.337511+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - PIR Activated",
-                    "hidden": true,
-                    "last_triggered": "2019-06-06T00:38:43.585910+00:00"
-                },
-                "context": {
-                    "id": "1e19242ab48f4dad95f6962df1a6448b",
-                    "parent_id": "8f09112964c8493aacf28f25ed4b0721",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_pir_activated",
-                "last_changed": "2019-06-04T00:48:06.488784+00:00",
-                "last_updated": "2019-06-06T00:38:43.586897+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Button BIDABED (single) -- Good Night",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T11:10:33.433033+00:00"
-                },
-                "context": {
-                    "id": "6cf0dafe438249e6a4d1684f6249ec72",
-                    "parent_id": "e9a58315bd214f3b9a0154d442ab5160",
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidabed_single_good_night",
-                "last_changed": "2019-06-04T00:48:06.492423+00:00",
-                "last_updated": "2019-06-05T11:10:33.433696+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Dev Console Button 2",
-                    "hidden": true,
-                    "last_triggered": "2019-06-02T22:20:42.774401+00:00"
-                },
-                "context": {
-                    "id": "e721e6f3e81a452bba173e00cd4f9c2c",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.dev_console_button_2",
-                "last_changed": "2019-06-04T00:48:06.495808+00:00",
-                "last_updated": "2019-06-04T00:48:06.495808+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Turn ON pechkata",
-                    "hidden": true,
-                    "last_triggered": "2019-06-01T02:38:15.360494+00:00"
-                },
-                "context": {
-                    "id": "a1ca92cd6777420684c4ce210953bd15",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_turn_on_pechkata",
-                "last_changed": "2019-06-04T00:48:06.499097+00:00",
-                "last_updated": "2019-06-04T00:48:06.499097+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Button BIDADOR (single) ON",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T21:58:28.928108+00:00"
-                },
-                "context": {
-                    "id": "f41b211036a5456994840b04e548d786",
-                    "parent_id": "1597717f4f6f4516a3170a9cd190dce7",
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidador_single_on",
-                "last_changed": "2019-06-04T00:48:06.502776+00:00",
-                "last_updated": "2019-06-05T21:58:28.929269+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback -Notify When Hassio Stats",
-                    "hidden": true,
-                    "last_triggered": "2019-06-01T13:25:56.989932+00:00"
-                },
-                "context": {
-                    "id": "aa68351efe234b9db0845ec1278b320b",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_notify_when_hassio_stats",
-                "last_changed": "2019-06-04T00:48:06.506724+00:00",
-                "last_updated": "2019-06-04T00:48:06.506724+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "PIR Hall - OFF",
-                    "hidden": true,
-                    "last_triggered": "2019-06-06T01:43:33.235460+00:00"
-                },
-                "context": {
-                    "id": "4691378aa0ee448086789a23647abc66",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.pir_hall_off",
-                "last_changed": "2019-06-04T00:48:06.510175+00:00",
-                "last_updated": "2019-06-06T01:43:33.236077+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Button BIDADOR (single)",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T21:58:28.989764+00:00"
-                },
-                "context": {
-                    "id": "0bc407005bab41eea793ac4895389c3c",
-                    "parent_id": "1597717f4f6f4516a3170a9cd190dce7",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_button_bidador_single_2",
-                "last_changed": "2019-06-04T00:48:06.513720+00:00",
-                "last_updated": "2019-06-05T21:58:28.991274+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Refresh Things When Hassio Stats",
-                    "hidden": true,
-                    "last_triggered": "2019-06-01T13:25:56.974866+00:00"
-                },
-                "context": {
-                    "id": "bb7e05fd6c4d41adaefac41e69fdd131",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.refresh_things_when_hassio_stats",
-                "last_changed": "2019-06-04T00:48:06.517054+00:00",
-                "last_updated": "2019-06-04T00:48:06.517054+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Button BIDABED (hold)",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T01:27:19.391107+00:00"
-                },
-                "context": {
-                    "id": "1254b3d61d134bbdb9dd15a6fdf342e1",
-                    "parent_id": "5ab4301602894fd28999e0ab00048ea6",
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidabed_hold",
-                "last_changed": "2019-06-04T00:48:06.520593+00:00",
-                "last_updated": "2019-06-05T01:27:19.391833+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Dev Console Button 3",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T11:32:03.344414+00:00"
-                },
-                "context": {
-                    "id": "7e55aed38f4a4c73ad3cf334641bbfc3",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.dev_console_button_3",
-                "last_changed": "2019-06-04T00:48:06.524518+00:00",
-                "last_updated": "2019-06-05T11:32:03.345161+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Button BIDABED (single) -- Good Morning",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T11:06:30.160664+00:00"
-                },
-                "context": {
-                    "id": "350aef9fe5e04f5ba149ce7d4b121de1",
-                    "parent_id": "d7704248999048628b8de166933e90cd",
-                    "user_id": null
-                },
-                "entity_id": "automation.button_bidabed_single_good_morning",
-                "last_changed": "2019-06-04T00:48:06.528313+00:00",
-                "last_updated": "2019-06-05T11:06:30.161297+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback -Boss Buttons",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T21:58:18.790162+00:00"
-                },
-                "context": {
-                    "id": "231f01f652ec4de784b090220917cc8d",
-                    "parent_id": "33fe134483ed4160a13f06d78715ddb0",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_boss_buttons",
-                "last_changed": "2019-06-04T00:48:06.533377+00:00",
-                "last_updated": "2019-06-05T21:58:18.790775+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Turn OFF pechkata",
-                    "hidden": true,
-                    "last_triggered": "2019-06-01T02:38:18.296942+00:00"
-                },
-                "context": {
-                    "id": "e4d6ab34279746c085180dae7162374c",
-                    "parent_id": null,
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_turn_off_pechkata",
-                "last_changed": "2019-06-04T00:48:06.537302+00:00",
-                "last_updated": "2019-06-04T00:48:06.537302+00:00",
-                "state": "on"
-            }
-        },
-        {
-            "last_seen": "2019-06-06T01:43:39.988502+00:00",
-            "state": {
-                "attributes": {
-                    "friendly_name": "Feedback - Button BIDADOR (double)",
-                    "hidden": true,
-                    "last_triggered": "2019-06-05T21:58:15.825376+00:00"
-                },
-                "context": {
-                    "id": "33d7bfebc1714dbb94b4a7ab44559332",
-                    "parent_id": "6bf3f418696a415fbd770445f61156a7",
-                    "user_id": null
-                },
-                "entity_id": "automation.feedback_button_bidador_double",
-                "last_changed": "2019-06-04T00:48:06.541095+00:00",
-                "last_updated": "2019-06-05T21:58:15.826040+00:00",
-                "state": "on"
+                "entity_id": "input_number.motion_timeout_hall",
+                "last_changed": "2019-06-06T02:01:08.347180+00:00",
+                "last_updated": "2019-06-06T02:01:08.347180+00:00",
+                "state": "0.0"
             }
         },
         {
@@ -867,7 +1055,7 @@
                 },
                 "context": {
                     "id": "c8b70b5ce3394bd28a3dbccd4a47df7e",
-                    "parent_id": "b287dfc46cf44f15b019f3c96d7737c9",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.pir_kitchen_on_2",
@@ -886,7 +1074,7 @@
                 },
                 "context": {
                     "id": "ce494e0c98e0496b9e159445c0ef243c",
-                    "parent_id": "1f42c4a59cfa47929e431886efd39d57",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.button_bidabed_double_dim_dem_lites_2",
@@ -905,7 +1093,7 @@
                 },
                 "context": {
                     "id": "4faf6605cd704b92b5740086aa4f078f",
-                    "parent_id": "1597717f4f6f4516a3170a9cd190dce7",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_button_bidador_single_3",
@@ -924,7 +1112,7 @@
                 },
                 "context": {
                     "id": "ab991d26bc494ccd849f2b34eaf0669d",
-                    "parent_id": "e9a58315bd214f3b9a0154d442ab5160",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.button_bidabed_single_good_night_2",
@@ -943,7 +1131,7 @@
                 },
                 "context": {
                     "id": "ef2f47f17ed34d6a9d38ec0a85d7a0cb",
-                    "parent_id": "8f09112964c8493aacf28f25ed4b0721",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_pir_activated_2",
@@ -962,7 +1150,7 @@
                 },
                 "context": {
                     "id": "565ce75216144661b7fc5ac0a34944e7",
-                    "parent_id": "5ab4301602894fd28999e0ab00048ea6",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.button_bidabed_hold_2",
@@ -1000,7 +1188,7 @@
                 },
                 "context": {
                     "id": "e318d86cbe7c4e2f95943ff61b964c38",
-                    "parent_id": "040fcc0db7a143e09eb5ff46dc0132d3",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_button_bidador_single_4",
@@ -1076,7 +1264,7 @@
                 },
                 "context": {
                     "id": "6dc611fd2d9340a89b50a61a6b2735c9",
-                    "parent_id": "e9a58315bd214f3b9a0154d442ab5160",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_button_bidabed_single_good_night_2",
@@ -1095,7 +1283,7 @@
                 },
                 "context": {
                     "id": "9e1065aeb6fa46189396d29930d4fde2",
-                    "parent_id": "040fcc0db7a143e09eb5ff46dc0132d3",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.button_bidador_single_off_2",
@@ -1152,7 +1340,7 @@
                 },
                 "context": {
                     "id": "ef6ad0b0dc144dca944b79d0151462c0",
-                    "parent_id": "d7704248999048628b8de166933e90cd",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_button_bidabed_single_good_morning_2",
@@ -1228,7 +1416,7 @@
                 },
                 "context": {
                     "id": "7c8dae53382542efb5dae631d4ebdab7",
-                    "parent_id": "3b8ea0992f7c4ccd94da5af4e2968b5b",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.dev_console_button_3_2",
@@ -1323,7 +1511,7 @@
                 },
                 "context": {
                     "id": "20d0c4ab9e434d0db8ecc1fbdd07ef8a",
-                    "parent_id": "f4cc1e32cf4b4b0583017445ecde88e8",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.dev_console_button_1_2",
@@ -1342,7 +1530,7 @@
                 },
                 "context": {
                     "id": "82a936be2c2d440883e69065786fb2c4",
-                    "parent_id": "33fe134483ed4160a13f06d78715ddb0",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_boss_buttons_2",
@@ -1361,7 +1549,7 @@
                 },
                 "context": {
                     "id": "ff8811a72e754899a4176f43d27d1751",
-                    "parent_id": "1f42c4a59cfa47929e431886efd39d57",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_button_bidabed_double_dim_dem_lites_2",
@@ -1380,7 +1568,7 @@
                 },
                 "context": {
                     "id": "80d8a0f5b46d436aaaef04ba954ccb5e",
-                    "parent_id": "6bf3f418696a415fbd770445f61156a7",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.button_bidador_double_2",
@@ -1399,7 +1587,7 @@
                 },
                 "context": {
                     "id": "ecb2a2e934624ac094606a7f0b938237",
-                    "parent_id": "6bf3f418696a415fbd770445f61156a7",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_button_bidador_double_2",
@@ -1418,7 +1606,7 @@
                 },
                 "context": {
                     "id": "2127a42ba40149aa97ecb03b317c5c1a",
-                    "parent_id": "f4cc1e32cf4b4b0583017445ecde88e8",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.feedback_boss_button_big_2",
@@ -1437,7 +1625,7 @@
                 },
                 "context": {
                     "id": "95844d2b2e874d7f9c7887222f1e46dd",
-                    "parent_id": "8f09112964c8493aacf28f25ed4b0721",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.pir_hall_on_2",
@@ -1456,7 +1644,7 @@
                 },
                 "context": {
                     "id": "ea2c8da0f8b246859f2f251c86f81ed1",
-                    "parent_id": "1597717f4f6f4516a3170a9cd190dce7",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.button_bidador_single_on_2",
@@ -1513,7 +1701,7 @@
                 },
                 "context": {
                     "id": "b46c7d98fe6a4034b99b433de0b34397",
-                    "parent_id": "d7704248999048628b8de166933e90cd",
+                    "parent_id": null,
                     "user_id": null
                 },
                 "entity_id": "automation.button_bidabed_single_good_morning_2",
