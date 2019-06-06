@@ -5,6 +5,7 @@ people:
   control: hidden
   entities:
   - person.choephix
+  - device_tracker.phone_mi5_traccar
   - device_tracker.mi5_cx
   - sensor.mi5_battery
 
@@ -13,10 +14,10 @@ some_lights:
   icon: mdi:bulb
   view: false
   entities:
-  - light.workdesk_headlamp
   - light.hq_lights
+  - light.hq_workdesk_1
   - light.bulb_21
-  - light.plug_tuya2_led
+  - light.tuya_plug_2_led
   - light.xiaomi_philips_candle
   - light.wall_ewe61
   - light.wall_ewe62
@@ -40,11 +41,15 @@ pechkata:
   control: hidden
   entities:
   - sensor.pechkata_timer
-  - switch.pechkata
+  - binary_sensor.tuya_pechkata_pow
   - script.pechka_10min
   - script.pechka_30min
   - script.pechka_60min
   - script.pechka_90min
+  - script.pechka_stop
+  - sensor.pechkata_current_ele
+  - sensor.pechkata_current_power
+  - sensor.pechkata_current_voltage
   - sensor.mi_temperature_01
   - sensor.mi_humidity_01
   - sensor.dht_sensor_temperature
@@ -66,11 +71,12 @@ Switches:
   view: false
   control: hidden
   entities:
-  - switch.power_strip_socket_1
-  - switch.power_strip_socket_2
-  - switch.power_strip_socket_3
-  - switch.power_strip_socket_4
-  - switch.power_strip_sockets_usb
+  - switch.powerstrip_socket_1
+  - switch.powerstrip_socket_2
+  - switch.powerstrip_socket_3
+  - switch.powerstrip_socket_4
+  - switch.powerstrip_sockets_usb
+  - switch.pechkata_plug
 
 Indicators:
   icon: mdi:bulb
@@ -95,6 +101,9 @@ dev_devices:
   - device_tracker.raspberry_pi_plus_wi
   - device_tracker.orange_pi_zero_plus 
   - device_tracker.orange_pi_zero_plus_wi
+  - sensor.sp10_current_ele
+  - sensor.sp10_current_power
+  - sensor.sp10_current_voltage
 
 Crap+:
   icon: mdi:etherium

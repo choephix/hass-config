@@ -4,8 +4,8 @@ person.choephix:
 light.hq_lights: 
   icon: mdi:ceiling-light 
 
-sensor.pechkata_timer:
-  device_class: timestamp
+# sensor.pechkata_timer:
+#   device_class: timestamp
 sensor.mi5_battery:
   device_class: battery
 sensor.cpu_temperature:

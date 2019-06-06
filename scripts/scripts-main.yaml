@@ -22,6 +22,10 @@ pechka_90min:
   alias: Heat for 90 minutes
   sequence: { service: input_number.set_value, entity_id: input_number.heat_duration, data: { value: 5400 } }
 
+pechka_stop:
+  alias: Stop Heating
+  sequence: { service: input_number.set_value, entity_id: input_number.heat_duration, data: { value: 0 } }
+
 # # # #
 
 lights_full:

@@ -93,6 +93,11 @@ system_health:
 # # # # # # # #
 
 device_tracker:
+  - platform: traccar
+    host: 192.168.0.220
+    port: 8072
+    username: choephix.pi@gmail.com
+    password: hjax0356
   - platform: ping
     count: 2
     hosts:
@@ -111,6 +116,18 @@ device_tracker:
       # - 192.168.0.177 #
 
 rest_command:
+  tuya_server:
+    url: "http://192.168.0.220:7074"
+    payload: '{ "device_id":"{{id}}", "dps_key":"{{dps}}", "dps_value":{% if value %} true {% else %} false {% endif %} }'
+    method: POST
+    headers: { "cache-control": "no-store", "Content-Type": "application/json" }
+    content_type:  'application/json; charset=utf-8'
+    verify_ssl: false
+  tuya_server_refresh:
+    url: "http://192.168.0.220:7074/refresh"
+    method: GET
+    verify_ssl: false
+    
   vhome_wall_switch:
     url: "http://{{ip}}:8081/zeroconf/switch"
     method: POST
@@ -143,11 +160,10 @@ rest_command:
     payload: '{"sequence":"force_off","deviceid":"x","selfApikey":"x","iv":"Nzk2MzA5NjcxMjY0MzExOA==","encrypt":true,"data":"jDYyFpgkyl1bd64xT/pJqqYDeeoYrYG9L6v2DIDedrw="}'
     verify_ssl: false
 
-tuya:
-  username: choephix@gmail.com
-  password: hjax0356
-  country_code: 359
-  platform: smart_life
+sonoff:
+  username: "i@thechoephix.com"
+  password: "ljax0356"
+  api_region: 'eu'
   
 xiaomi_aqara:
   discovery_retry: 30
@@ -155,29 +171,14 @@ xiaomi_aqara:
 
 yeelight:
     devices:
-      192.168.0.71:
-        name: Bulb 11
-        transition: 500
-        model: color1
-      192.168.0.72:
-        name: Bulb 12
-        transition: 500
-        model: color1
-      192.168.0.73:
-        name: Bulb 13
-        transition: 500
-        model: color2
-      192.168.0.74:
-        name: Bulb 21
-        transition: 500
-        model: color2
+      192.168.0.71: { name: "Bulb 11", model: color1, transition: 500 }
+      192.168.0.72: { name: "Bulb 12", model: color1, transition: 500 }
+      192.168.0.73: { name: "Bulb 13", model: color2, transition: 500 }
+      192.168.0.74: { name: "Bulb 21", model: color2, transition: 500 }
     
 # # # # # # # #
 
-input_boolean:
-  power_ewe61:
-  power_ewe62:
-  light_tuya2:
+input_boolean: { power_ewe61: {}, power_ewe62: {} }
 
 input_number:
   heat_duration:
@@ -198,48 +199,34 @@ light:
   - platform: xiaomi_miio
     name: Xiaomi Philips Candle
     host: 192.168.0.150
-    token: 9fb9e28519168c4826f7fd4642b73e09
+    token: "9fb9e28519168c4826f7fd4642b73e09"
     model: philips.light.candle
+  - platform: template
+    lights:
+      tuya_plug_2_led:
+        friendly_name: "SP10 Plug LED"
+        value_template: "{{ states.binary_sensor.tuya_sp10_led.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "02433075dc4f22ea61f2", dps: 27, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "02433075dc4f22ea61f2", dps: 27, value: false } }
+        icon_template: "mdi:pokeball"
+      hq_workdesk_1:
+        friendly_name: "HQ Workdesk Headlamp"
+        value_template: "{{ states.binary_sensor.tuya_plug_4_pow.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "74603836cc50e3430253", dps: 1, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "74603836cc50e3430253", dps: 1, value: false } }
+        icon_template: "mdi:desk-lamp"
   - platform: template
     lights:
       wall_ewe61:
         value_template: "{{ states.input_boolean.power_ewe61.state }}"
-        turn_on:
-          - service: rest_command.vhome61_on
-          - service: input_boolean.turn_on
-            entity_id: input_boolean.power_ewe61
-        turn_off:
-          - service: rest_command.vhome61_off
-          - service: input_boolean.turn_off
-            entity_id: input_boolean.power_ewe61
+        turn_on:  [ { service: rest_command.vhome61_on }, { service: input_boolean.turn_on, entity_id: input_boolean.power_ewe61 } ]
+        turn_off: [ { service: rest_command.vhome61_off }, { service: input_boolean.turn_off, entity_id: input_boolean.power_ewe61 } ]
         icon_template: mdi:light-switch
       wall_ewe62:
         value_template: "{{ states.input_boolean.power_ewe62.state }}"
-        turn_on:
-          - service: rest_command.vhome62_on
-          - service: input_boolean.turn_on
-            entity_id: input_boolean.power_ewe62
-        turn_off:
-          - service: rest_command.vhome62_off
-          - service: input_boolean.turn_off
-            entity_id: input_boolean.power_ewe62
+        turn_on:  [ { service: rest_command.vhome62_on }, { service: input_boolean.turn_on, entity_id: input_boolean.power_ewe62 } ]
+        turn_off: [ { service: rest_command.vhome62_off }, { service: input_boolean.turn_off, entity_id: input_boolean.power_ewe62 } ]
         icon_template: mdi:light-switch
-      plug_tuya2_led:
-        value_template: "{{ states.input_boolean.light_tuya2.state }}"
-        turn_on:
-          - service: scene.turn_on
-            entity_id: scene.plug_tuya_2_led_on
-          - service: input_boolean.turn_on
-            entity_id: input_boolean.light_tuya2
-        turn_off:
-          - service: scene.turn_on
-            entity_id: scene.plug_tuya_2_led_off
-          - service: input_boolean.turn_off
-            entity_id: input_boolean.light_tuya2
-        icon_template: mdi:pokeball
-  - platform: switch
-    name: Workdesk Headlamp
-    entity_id: switch.plug_tuya_3
     
 switch:
   - platform: rpi_gpio
@@ -247,18 +234,37 @@ switch:
       21: HASS LED
   - platform: template
     switches:
-      pechkata:
-        friendly_name: Печката
-        value_template: "{{ ( states.input_number.heat_duration.state | int ) > 0 }}"
-        turn_on:
-          - service: input_number.set_value
-            entity_id: input_number.heat_duration
-            data: { value: 30 }
-        turn_off:
-          - service: input_number.set_value
-            entity_id: input_number.heat_duration
-            data: { value: 0 }
-        icon_template: "{% if ( states.input_number.heat_duration.state | int ) %}mdi:radiator{% else %}mdi:radiator-disabled{% endif %}"
+      pechkata_plug:
+        friendly_name: "Печката Power"
+        value_template: "{{ states.binary_sensor.tuya_pechkata_pow.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "53510070ecfabc9f2edd", dps: 101, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "53510070ecfabc9f2edd", dps: 101, value: false } }
+        icon_template: "{% if is_state( 'binary_sensor.tuya_pechkata_pow', 'on' ) %} mdi:radiator {% else %} mdi:radiator-disabled {% endif %}"
+      powerstrip_socket_1:
+        friendly_name: "Powerstrip Socket 1"
+        value_template: "{{ states.binary_sensor.tuya_power_strip_1.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 1, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 1, value: false } }
+      powerstrip_socket_2:
+        friendly_name: "Powerstrip Socket 2"
+        value_template: "{{ states.binary_sensor.tuya_power_strip_2.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 2, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 2, value: false } }
+      powerstrip_socket_3:
+        friendly_name: "Powerstrip Socket 3"
+        value_template: "{{ states.binary_sensor.tuya_power_strip_3.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 3, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 3, value: false } }
+      powerstrip_socket_4:
+        friendly_name: "Powerstrip Socket 4"
+        value_template: "{{ states.binary_sensor.tuya_power_strip_4.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 4, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 4, value: false } }
+      powerstrip_sockets_usb:
+        friendly_name: "Powerstrip Socket USB"
+        value_template: "{{ states.binary_sensor.tuya_power_strip_5.state }}"
+        turn_on:  { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 7, value: true } } 
+        turn_off: { service: rest_command.tuya_server, data: { id: "86371672dc4f22e58b28", dps: 7, value: false } }
 
 # # # # # # # #
 
@@ -280,7 +286,26 @@ binary_sensor:
       boiler_heating:
         friendly_name: "Water Heating"
         value_template: "{{ states.switch.plug_xiaomi_1.attributes.load_power|float > 10 }}"
-      
+  - platform: template
+    sensors:
+      tuya_plug_4_pow:    { value_template: unknown }
+      tuya_power_strip_1: { value_template: unknown }
+      tuya_power_strip_2: { value_template: unknown }
+      tuya_power_strip_3: { value_template: unknown }
+      tuya_power_strip_4: { value_template: unknown }
+      tuya_power_strip_5: { value_template: unknown }
+      tuya_sp10_led:      { value_template: unknown } 
+      tuya_sp10_pow:      { value_template: unknown } # never turn this off!!
+      tuya_pechkata_led:  { value_template: unknown }
+      # tuya_pechkata_pow:  { value_template: unknown }
+      tuya_pechkata_pow:
+        friendly_name: Печката Socket
+        value_template: unknown
+        # value_template: "{{ ( states.input_number.heat_duration.state | int ) > 0 }}"
+        # turn_on:  { service: input_number.set_value, entity_id: input_number.heat_duration, data: { value: 30 } }
+        # turn_off: { service: input_number.set_value, entity_id: input_number.heat_duration, data: { value: 0 } }
+        # icon_template: "{% if ( states.binary_sensor.tuya_pechkata_pow.state ) %} mdi:radiator {% else %} mdi:radiator-disabled {% endif %}"
+    
 sensor:
   - platform: time_date
     display_options: ['time']
@@ -327,30 +352,14 @@ sensor:
         value_template: '{{ states.device_tracker.mi5_cx.attributes.battery }}'
         friendly_name: 'Phone Battery' 
         unit_of_measurement: '%⚡'
-        # icon_template: >
-        #   {% if states.device_tracker.mi5_cx.attributes.battery %}
-        #     {% if states.device_tracker.mi5_cx.attributes.battery >= 98 %}
-        #       mdi:battery 
-        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 85 %}
-        #       mdi:battery-90 
-        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 75 %}
-        #       mdi:battery-80 
-        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 65 %}
-        #       mdi:battery-70 
-        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 50 %}
-        #       mdi:battery-50 
-        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 35 %}
-        #       mdi:battery-30 
-        #     {% elif states.device_tracker.mi5_cx.attributes.battery >= 25 %}
-        #       mdi:battery-20 
-        #     {% elif states.device_tracker.mi5_cx.attributes.battery <= 15 %}
-        #       mdi:battery-10 
-        #     {% else %}
-        #       mdi:battery-outline 
-        #     {% endif %}
-        #   {% else %}
-        #     mdi:battery-unknown 
-        #   {% endif %}
+  - platform: template
+    sensors:
+      pechkata_current_ele:     { value_template: unknown }
+      pechkata_current_power:   { value_template: unknown }
+      pechkata_current_voltage: { value_template: unknown }
+      sp10_current_ele:         { value_template: unknown }
+      sp10_current_power:       { value_template: unknown }
+      sp10_current_voltage:     { value_template: unknown }
 
 # # # # # # # #
 # # # # # # # #

@@ -8,15 +8,15 @@
   
 - alias: "Dev Console Button 2"
   trigger: { platform: state, entity_id: binary_sensor.bb_button_2, to: "on" }
-  action: { service: light.toggle, entity_id: light.xiaomi_philips_candle }
+  action: { service: switch.toggle, entity_id: switch.hass_led }
   
 - alias: "Dev Console Button 3"
   trigger: { platform: state, entity_id: binary_sensor.bb_button_3, to: "on" }
-  action: { service: light.turn_on, data: { entity_id: light.xiaomi_philips_candle, color_temp: 333 } }
+  action: { service: light.toggle, data: { entity_id: light.xiaomi_philips_candle, color_temp: 333 } }
   
 - alias: "Dev Console Button 4"
   trigger: { platform: state, entity_id: binary_sensor.bb_button_4, to: "on" }
-  action: { service: switch.toggle, entity_id: switch.hass_led }
+  action: { service: homeassistant.turn_off, entity_id: group.all_lights }
   
 - alias: "Dev Console Button 5"
   trigger: { platform: state, entity_id: binary_sensor.bb_button_5, to: "on" }

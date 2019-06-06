@@ -1,3 +1,9 @@
+# # # # HASSIO # # # #
+
+- alias: Refresh Things When Hassio Stats
+  trigger: { platform: homeassistant, event: start }
+  action: { service: rest_command.tuya_server_refresh }
+    
 # # # # PECHKATA TIMER # # # #
 
 - alias: On enter second
@@ -7,11 +13,11 @@
 
 - alias: Turn ON pechkata
   trigger: { platform: numeric_state, entity_id: input_number.heat_duration, above: 0 }
-  action: { service: scene.turn_on, entity_id: scene.pechkata_on }
+  action: { service: switch.turn_on, entity_id: switch.pechkata_plug }
 
 - alias: Turn OFF pechkata
   trigger: { platform: numeric_state, entity_id: input_number.heat_duration, below: 1 }
-  action: { service: scene.turn_on, entity_id: scene.pechkata_off }
+  action: { service: switch.turn_off, entity_id: switch.pechkata_plug }
       
 # # # # MOTION # # # #
 
@@ -23,7 +29,7 @@
     
 - alias: PIR Kitchen - ON
   trigger:  { platform: state, entity_id: binary_sensor.pir_kitchen, to: "on" }
-  condition: { condition: template, value_template: '{{ states.sun.sun.attributes.elevation < 15 }}' }
+  #condition: { condition: template, value_template: '{{ states.sun.sun.attributes.elevation < 15 }}' }
   action: { service: light.turn_on, entity_id: light.wall_ewe62 }
     
 - alias: PIR Hall - OFF

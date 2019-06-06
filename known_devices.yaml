@@ -61,3 +61,19 @@ orange_pi_pc_wi:
   name: orange pi pc wi
   picture:
   track: true
+
+phone_mi5:
+  hide_if_away: false
+  icon:
+  mac:
+  name: phone mi5
+  picture:
+  track: true
+
+phone_mi5_traccar:
+  hide_if_away: false
+  icon:
+  mac:
+  name: phone mi5 traccar
+  picture:
+  track: true
