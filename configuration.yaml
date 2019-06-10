@@ -128,6 +128,25 @@ rest_command:
     method: GET
     verify_ssl: false
     
+  vhome_wall_switch:
+    url: "http://{{ip}}:8081/zeroconf/switch"
+    method: POST
+    headers: { "cache-control":"no-store" }
+    payload: '{"sequence":"force_on","deviceid":"x","selfApikey":"x","iv":"{{iv}}","encrypt":true,"data":"{{data}}"}'
+    verify_ssl: false
+    
+  vhome61_on:
+    url: http://192.168.0.61:8081/zeroconf/switch
+    method: POST
+    headers: { "cache-control":"no-store" }
+    payload: '{"sequence":"force_on","deviceid":"x","selfApikey":"x","iv":"NjU3ODU4ODY3MjQyNzUwMw==","encrypt":true,"data":"AWza9cwpLRwcSFQeSl5e2A=="}'
+    verify_ssl: false
+  vhome61_off:
+    url: http://192.168.0.61:8081/zeroconf/switch
+    method: POST
+    headers: { "cache-control":"no-store" }
+    payload: '{"sequence":"force_off","deviceid":"x","selfApikey":"x","iv":"OTMxMTQzMDI4ODE4MTIxNQ==","encrypt":true,"data":"IR3WzqNIJGkwOvzhbK+q3N20sVLSXZP9vS2jnESf53Q="}'
+    verify_ssl: false
   vhome62_on:
     url: http://192.168.0.62:8081/zeroconf/switch
     method: POST
@@ -140,11 +159,6 @@ rest_command:
     headers: { "cache-control":"no-store" }
     payload: '{"sequence":"force_off","deviceid":"x","selfApikey":"x","iv":"Nzk2MzA5NjcxMjY0MzExOA==","encrypt":true,"data":"jDYyFpgkyl1bd64xT/pJqqYDeeoYrYG9L6v2DIDedrw="}'
     verify_ssl: false
-
-sonoff:
-  username: "i@thechoephix.com"
-  password: "ljax0356"
-  api_region: 'eu'
   
 xiaomi_aqara:
   discovery_retry: 30
@@ -177,9 +191,6 @@ light:
       - light.bulb_11
       - light.bulb_12
       - light.bulb_13
-  - platform: switch
-    name: Hall Lights
-    entity_id: switch.sonoff_10007ab6c4
   - platform: xiaomi_miio
     name: Xiaomi Philips Candle
     host: 192.168.0.150
@@ -201,6 +212,11 @@ light:
         icon_template: "mdi:desk-lamp"
   - platform: template
     lights:
+      wall_ewe61:
+        value_template: "{{ states.input_boolean.power_ewe61.state }}"
+        turn_on:  [ { service: rest_command.vhome61_on }, { service: input_boolean.turn_on, entity_id: input_boolean.power_ewe61 } ]
+        turn_off: [ { service: rest_command.vhome61_off }, { service: input_boolean.turn_off, entity_id: input_boolean.power_ewe61 } ]
+        icon_template: mdi:light-switch
       wall_ewe62:
         value_template: "{{ states.input_boolean.power_ewe62.state }}"
         turn_on:  [ { service: rest_command.vhome62_on }, { service: input_boolean.turn_on, entity_id: input_boolean.power_ewe62 } ]
